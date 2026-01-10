@@ -13,7 +13,7 @@ html{
 
 body{ font: 16px var(--ff)}
 
-.container{ max-width: 1170px; margin: auto; padding: 0 1rem;}
+.container{ max-width: 1200px; margin: auto; padding: 0 1rem;}
 .row{ display: grid; grid-template-columns: repeat(12,1fr); gap: 2rem;}
 .col-1{ grid-column: span 1;}
 .col-2{ grid-column: span 2;}
