@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css" />
 </head>
 
 <body>
@@ -40,7 +43,7 @@
                     <div class="col-9">
                         <div class="flex justify-space-bet align-center">
                             <nav>
-                                <ul class="flex">
+                                <ul class="flex nav-menu">
                                     <li><a class="active" href="index.html">Home</a></li>
                                     <li><a href="">About</a></li>
                                     <li><a href="">Contact</a></li>
@@ -50,17 +53,32 @@
                             <div class="flex align-center">
                                 <button class="search" type="button" title="search"><span class="fa fa-magnifying-glass"
                                         aria-hidden="true"></span></button>
-                                <form action="/search">
-                                    <input type="text" name="search" placeholder="What are you looking for?" required>
-                                    <button type="button" title="search"><span class="fa fa-magnifying-glass"
+                                    <form action="/search">
+                                        <input type="text" name="search" placeholder="What are you looking for?"
+                                            required>
+                                        <button type="button" title="search"><span class="fa fa-magnifying-glass"
+                                                aria-hidden="true"></span></a>
+                                    </form>
+                                    <a href="wishlist.html" class="wishlist" title="wishlist"><span class="fa-regular fa-heart"
+                                            aria-hidden="true"></a>
+                                    <button type="button" class="cart" title="cart"><span
+                                            class="fa-solid fa-cart-shopping" aria-hidden="true"></span></button>
+                                    <!-- <button type="button" class="account" title="account"><span
+                                        class="fa fa-user"></span></button> -->
+                                    <button type="button" class="menu" title="menu"><span class="fa fa-bars"
                                             aria-hidden="true"></span></button>
-                                </form>
-                                <button class="wishlist" title="wishlist"><span class="fa-regular fa-heart"
-                                        aria-hidden="true"></span></button>
-                                <button class="cart" title="cart"><span class="fa-solid fa-cart-shopping"
-                                        aria-hidden="true"></span></button>
-                                <button class="menu" title="menu"><span class="fa fa-bars"
-                                        aria-hidden="true"></span></button>
+                                    <!-- <div class="account-dropdown">
+                                        <ul>
+                                            <li><a href=""><span class="fa fa-user"></span> Account</a></li>
+                                            <li><a href=""><span class="fa fa-bag-shopping"></span> My Orders</a></li>
+                                            <li><a href=""><span class="fa fa-circle-xmark"></span> My Cancellations</a>
+                                            </li>
+                                            <li><a href=""><span class="fa fa-star"></span>My Reviews</a></li>
+                                            <li><a href=""><span
+                                                        class="fas fa-arrow-right-from-bracket fa-rotate-180"></span>Signout</a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -89,23 +107,36 @@
                     </div>
                     <div class="col-9 col-m-12">
                         <div class="slider">
-                            <div class="slide">1</div>
-                            <div class="slide">2</div>
-                            <div class="slide active">
+                            <div class="slide">
                                 <figure>
-                                    <img src="img/banner.webp" alt="frame" width="892" height="344" class="img-resp">
+                                    <img src="img/banner.webp" alt="frame" width="892" height="450" class="img-resp">
                                     <a class="shop" href="#">Shop Now <span>&rarr;</span></a>
                                 </figure>
                             </div>
-                            <div class="slide">4</div>
-                            <div class="slide">5</div>
-                            <ul class="pager flex align-center">
-                                <li><a href="" title="pager"></a></li>
-                                <li><a href="" title="pager"></a></li>
-                                <li><a class="active" href="" title="pager"></a></li>
-                                <li><a href="" title="pager"></a></li>
-                                <li><a href="" title="pager"></a></li>
-                            </ul>
+                            <div class="slide">
+                                <figure>
+                                    <img src="img/banner.webp" alt="frame" width="736" height="736" class="img-resp">
+                                    <a class="shop" href="#">Shop Now <span>&rarr;</span></a>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="img/banner.webp" alt="frame" width="736" height="686" class="img-resp">
+                                    <a class="shop" href="#">Shop Now <span>&rarr;</span></a>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="img/banner.webp" alt="frame" width="736" height="736" class="img-resp">
+                                    <a class="shop" href="#">Shop Now <span>&rarr;</span></a>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="img/banner.webp" alt="frame" width="736" height="736" class="img-resp">
+                                    <a class="shop" href="#">Shop Now <span>&rarr;</span></a>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,8 +190,8 @@
                                 <div class="discount">-35%</div>
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img  src="img/keyboard.png" alt="keyboard"
-                                    width="191" height="101" loading="lazy" class="img-resp">
+                                <img src="img/keyboard.png" alt="keyboard" width="191" height="101" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -183,8 +214,8 @@
                                 <div class="discount">-30%</div>
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/TV.webp" alt="TV"
-                                    width="172" height="152" loading="lazy" class="img-resp">
+                                <img src="img/TV.webp" alt="TV" width="172" height="152" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -207,8 +238,8 @@
                                 <div class="discount">-25%</div>
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/chair.png" alt="Chair"
-                                    width="172" height="152" loading="lazy" class="img-resp">
+                                <img src="img/chair.png" alt="Chair" width="172" height="152" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -261,8 +292,8 @@
                     </div>
                     <div class="col-2 col-m-4 col-p-6">
                         <a href="" class="cat-item">
-                            <img src="img/Category-Camera.png" alt="camera" loading="lazy" class="img-resp"
-                                width="56" height="56">
+                            <img src="img/Category-Camera.png" alt="camera" loading="lazy" class="img-resp" width="56"
+                                height="56">
                             <h3>Camera</h3>
                         </a>
                     </div>
@@ -275,8 +306,8 @@
                     </div>
                     <div class="col-2 col-m-4 col-p-6">
                         <a href="" class="cat-item">
-                            <img src="img/Category-Gamepad.png" alt="gamePad" loading="lazy" class="img-resp"
-                                width="56" height="56">
+                            <img src="img/Category-Gamepad.png" alt="gamePad" loading="lazy" class="img-resp" width="56"
+                                height="56">
                             <h3>Gamepad</h3>
                         </a>
                     </div>
@@ -309,8 +340,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/shirt.png" alt="Shirt"
-                                    width="172" height="152" loading="lazy" class="img-resp">
+                                <img src="img/shirt.png" alt="Shirt" width="172" height="152" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -332,8 +363,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/bag.png" alt="Bag"
-                                    width="172" height="152" loading="lazy" class="img-resp">
+                                <img src="img/bag.png" alt="Bag" width="172" height="152" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -355,8 +386,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/musicPlayer.png" alt="CPU cooler"
-                                    width="172" height="152" loading="lazy" class="img-resp">
+                                <img src="img/musicPlayer.png" alt="CPU cooler" width="172" height="152" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -378,8 +409,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/desk.png" alt="Desk"
-                                    width="172" height="152" loading="lazy" class="img-resp">
+                                <img src="img/desk.png" alt="Desk" width="172" height="152" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -449,8 +480,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/Dog_food.jpg" alt="Dog_food"
-                                    width="115" height="180" loading="lazy" class="img-resp">
+                                <img src="img/Dog_food.jpg" alt="Dog_food" width="115" height="180" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -472,8 +503,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/DSLR_camera.png" alt="DSLR_camera"
-                                    width="146" height="163" loading="lazy" class="img-resp">
+                                <img src="img/DSLR_camera.png" alt="DSLR_camera" width="146" height="163" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -495,8 +526,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/ipad.png" alt="iPad"
-                                    width="172" height="180" loading="lazy" class="img-resp">
+                                <img src="img/ipad.png" alt="iPad" width="172" height="180" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -518,8 +549,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/product.png" alt="Products"
-                                    width="172" height="159" loading="lazy" class="img-resp">
+                                <img src="img/product.png" alt="Products" width="172" height="159" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -544,8 +575,8 @@
                                 <div class="new"><a href="">New</a></div>
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/car.png" alt="Car"
-                                    width="180" height="133" loading="lazy" class="img-resp">
+                                <img src="img/car.png" alt="Car" width="180" height="133" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -571,8 +602,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/Shoes.png" alt="Shoes"
-                                    width="186" height="164" loading="lazy" class="img-resp">
+                                <img src="img/Shoes.png" alt="Shoes" width="186" height="164" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -599,8 +630,8 @@
                                 <div class="new"><a href="">New</a></div>
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/Shooter_Gamepad.png" alt="Shooter Gamepad"
-                                    width="178" height="150" loading="lazy" class="img-resp">
+                                <img src="img/Shooter_Gamepad.png" alt="Shooter Gamepad" width="178" height="150"
+                                    loading="lazy" class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -626,8 +657,8 @@
                             <div class="product-img">
                                 <div class="wishlist"><a href="" title="wishlist" class="fa-regular fa-heart"></a></div>
                                 <div class="preview"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/jacket.png" alt="Jacket"
-                                    width="182" height="176" loading="lazy" class="img-resp">
+                                <img src="img/jacket.png" alt="Jacket" width="182" height="176" loading="lazy"
+                                    class="img-resp">
                                 <a class="addtocart" href="">Add To Cart</a>
                             </div>
                             <div class="product-desc">
@@ -663,7 +694,7 @@
                 <div class="row ">
                     <div class="col-6 ">
                         <div class="new-products-lg">
-                            <img src="img/playstation.webp" alt="play Station" width="511" height="511" loading="lazy"
+                            <img src="img/playstation.svg" alt="play Station" width="570" height="600" loading="lazy"
                                 class="img-resp">
                             <div class="product-desc-over">
                                 <h3>Play Station 5</h3>
@@ -672,9 +703,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 ">
+                    <div class="col-6  ">
                         <div class="new-products-md ">
-                            <img src="img/women.webp" alt="women" width="432" height="286" loading="lazy"
+                            <img src="img/women.svg" alt="women" width="432" height="284" loading="lazy"
                                 class="img-resp">
                             <div class="product-desc-over">
                                 <h3>Women's Collections</h3>
@@ -683,9 +714,9 @@
                             </div>
                         </div>
                         <div class="row ">
-                            <div class="col-6 ">
+                            <div class="col-6">
                                 <div class="new-products-sm ">
-                                    <img src="img/speaker.webp" alt="speaker" width="210" height="222" loading="lazy"
+                                    <img src="img/speaker.svg" alt="speaker" width="210" height="222" loading="lazy"
                                         class="img-resp">
                                     <div class="product-desc-over">
                                         <h3>Speakers</h3>
@@ -696,7 +727,7 @@
                             </div>
                             <div class="col-6 ">
                                 <div class="new-products-sm  ">
-                                    <img src="img/perfume.webp" alt="perfume" width="210" height="222" loading="lazy"
+                                    <img src="img/perfume.svg" alt="perfume" width="201" height="222" loading="lazy"
                                         class="img-resp">
                                     <div class="product-desc-over">
                                         <h3>Perfume</h3>
@@ -789,6 +820,128 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+    <script>
+        $(function () {
+            $(".hamburger").click(function () {
+                $(".nav-menu").slideDown();
+                $(this).hide();
+                $(".cross").show();
+            });
+
+            $(".cross").click(function () {
+                $(".nav-menu").slideUp();
+                $(this).hide();
+                $(".hamburger").show();
+            });
+
+            $(".slider").bxSlider({
+                controls: false,
+                auto: true,
+                pause: 5000,
+                autoHover: true,
+            });
+
+            $('.popup-image').magnificPopup({
+                type: 'image'
+            });
+
+            // $(".account").click(function () {
+            //     $(this).toggleClass("active");
+            //     $(".account-dropdown").slideUp();
+            // })
+        });
+    </script>
 </body>
 
 </html>
+
+<!-- 
+$(".account").click(function(){
+$(this).toggleClass("active");
+$(".account-dropdown").slideToggle();
+});
+$(".account").blur(function(){
+$(this).removeClass("active");
+$(".account-dropdown").slideUp();
+})
+
+$("aside a.drop").click(function(e){
+e.preventDefault();
+
+if($(this).next().is(":visible")){
+$(".cat-dropdown").fadeOut();
+}
+else{
+$(".cat-dropdown").fadeOut(0);
+$(this).next().fadeIn()
+}
+});
+$("aside a").blur(function(){
+$(".cat-dropdown").fadeOut();
+});
+
+if($('.slides').length){
+$(".slides").slick({
+autoplay:true,
+arrows:false,
+dots:true
+});
+
+}
+
+if($('.ticker').length){
+$(".ticker").slick({
+infinite: true,
+slidesToShow: 4,
+slidesToScroll: 4,
+arrows:true
+});
+}
+
+
+
+function saleTimer(date1, date2) {
+// Get total difference in milliseconds and take the absolute value
+let difference_ms = Math.abs(date2.getTime() - date1.getTime());
+
+// Convert milliseconds to seconds
+let delta = difference_ms / 1000;
+
+// Calculate days, hours, minutes, and seconds
+const days = Math.floor(delta / 86400); // Number of seconds in a day (24 * 60 * 60)
+delta -= days * 86400; // Subtract the days in seconds
+
+const hours = Math.floor(delta / 3600) % 24; // Number of seconds in an hour (60 * 60)
+delta -= hours * 3600; // Subtract the hours in seconds
+
+const minutes = Math.floor(delta / 60) % 60; // Number of seconds in a minute
+delta -= minutes * 60; // Subtract the minutes in seconds
+
+const seconds = Math.floor(delta % 60); // Remaining seconds
+
+return {
+days: days,
+hours: hours,
+minutes: minutes,
+seconds: seconds
+};
+}
+
+function saleTime(){
+const startDate = new Date();
+const endDate = new Date(1766639337832+(1000*60*60*24*4));
+const difference = saleTimer(startDate, endDate);
+
+
+if(difference.days<10){$(".days span").html('0'+difference.days)}else{$(".days span").html(difference.days);}
+    if(difference.hours<10){$(".hours span").html('0'+difference.hours)}else{$(".hours span").html(difference.hours);}
+    if(difference.minutes<10){$(".mins span").html('0'+difference.minutes)}else{$(".mins
+    span").html(difference.minutes);} if(difference.seconds<10){$(".secs
+    span").html('0'+difference.seconds)}else{$(".secs span").html(difference.seconds);} } // --- Example Usage ---
+    saleTime(); setInterval(saleTime,1000); -->

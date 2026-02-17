@@ -48,13 +48,17 @@
                                     <li><a href="signup.html">Sign Up</a></li>
                                 </ul>
                             </nav>
-                            <div class="search flex">
-                                <form action="/search">
-                                    <input type="text" name="search" placeholder="What are you looking for?" />
-                                    <button type="button" title="search">
-                                        <span class="fa fa-magnifying-glass" aria-hidden="true"></span></button>&nbsp;
-                                    &nbsp;
-                                </form>
+                            <div class="flex align-center">
+                                <button class="search" type="button" title="search"><span class="fa fa-magnifying-glass"
+                                        aria-hidden="true"></span></button>
+                                    <form action="/search">
+                                        <input type="text" name="search" placeholder="What are you looking for?"
+                                            required>
+                                        <button type="button" title="search"><span class="fa fa-magnifying-glass"
+                                                aria-hidden="true"></span></a>
+                                        </form>
+                                    <button type="button" class="menu" title="menu"><span class="fa fa-bars"
+                                            aria-hidden="true"></span></button>
                             </div>
                         </div>
                     </div>
@@ -64,23 +68,24 @@
     </div>
     <div class="wrap-2">
         <div class="container">
-            <div class="row justify-right align-center">
-                <div class="image col-6">
+            <div class="row  signup justify-right">
+                <div class="image col-6 hide-p">
                     <img src="img/signup.svg" alt="Image" width="805" height="781" class="img-resp" />
                 </div>
-                <div class="col-1"></div>
-                <div class="col-5 desc">
-                    <h1>Create an account</h1>
-                    <p>Enter your details below</p>
-                    <div>
-                        <ul>
-                            <li>Name</li>
-                            <li>Email or Phone Number</li>
-                            <li>Password</li>
-                        </ul>
-                        <a href="#">Create Account</a>
-                        <a href="#">Signup with google</a>
-                    </div>
+                <div class="col-1 hide-m"></div>
+                <div class="col-5 col-p-12 desc ">
+                    <h3>Create an account</h3>
+                    <p class="sign-para">Enter your details below</p>
+                        <form class="flex ">
+                            <label><input type="text" name="name" title="name" placeholder="Name"></label>
+                            <label><input type="email" name="name" title="name" placeholder="Email or Phone Number"></label>
+                            <label><input type="password" name="name" title="name" placeholder="Password"></label>
+                        </form>
+                        <div class="signup-desc text-center flex">
+                            <a href="#" class="create-acc" >Create Account</a>
+                        <p class="sign-w-g"><i class="fa-brands fa-google"></i><a href="#">Signup with google</a></p>
+                        <p>Already have account ?&nbsp; <a href="login.html">Log in</a></p>
+                        </div>
                 </div>
             </div>
         </div>
