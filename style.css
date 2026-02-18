@@ -121,7 +121,8 @@ h2{font: 600 36px var(--ff);}
 
 
 .new-arrival{ margin: 140px 0;}
-[class^="new-products"]{background: #000; color: #fff; position: relative;  overflow: hidden; border-radius: 4px; margin-top: 60px;  }
+.new-products-sm-about{gap:1rem}
+[class^="new-products"]{background: #000; color: #fff; position: relative;  overflow: hidden; border-radius: 4px; margin-top: 80px;  }
 .new-products-lg{  padding: 89px 30px 0 0; }
 .new-products-sm{ padding: 32px;  } 
 .product-desc-over{ position: absolute; left: 30px; bottom: 32px; } 
@@ -160,9 +161,28 @@ footer form input:focus{outline: none;}
 .signup-desc .create-acc{ display: block; color: #fff; background:#DB4444 ; padding: 0.7rem 0; border-radius: 5px; margin: 0.4rem 0 0.2rem 0; }
 .signup-desc .sign-w-g{border: solid 1px #000; margin: 0.8rem 0; padding: 0.8rem 0; }
 
+/* login page */
 .login-desc{display: flex; margin: 1rem 0 2rem 0;}
 .login-acc{display: inline-block; color: #fff; background-color: #DB4444; padding: 0.7rem 0; border-radius: 5px; width: 9rem;}
 .f-pass{color: #DB4444; margin: 0.5rem 0 0 3rem; text-align: center;}
+
+/* about page */
+.p1{
+    margin: 24px 20px 0 0;
+}
+.nav-section{margin: 80px 0 42px 0;}
+.inactive{opacity: 0.5;}
+.featured h3{margin-top:2rem ;}
+.featured .col-3 {border: solid 1px black; padding: 3rem 2rem; height: 14rem; margin-top: 2rem; }
+.featured .row{ margin-top: 2rem;}
+
+.profile{margin-bottom: 80px; }
+
+.profile img { height: 20rem; background-color: #fbf7f7;padding: 1.7rem 1rem 0 1rem; margin-bottom: 1rem; }
+.profile h3{ color: #877fda; font-size: 32px; font-weight: 500;}
+.profile p{margin: 0.8rem 0;}
+.profile a{ text-decoration: none; color: #0a0a0a; margin-left: 6px;}
+.profile ul{ margin-left: 3rem;}
 
 
 
@@ -183,6 +203,7 @@ footer form input:focus{outline: none;}
     .menu{display: inline-block;}
     .banner aside li:not(:last-child){margin-bottom: 7px;}
     .banner aside li a{line-height: 20px;}
+    [class^="new-products"]{margin-top: 20px;}
 }
 
 @media screen and (max-width:787px){
