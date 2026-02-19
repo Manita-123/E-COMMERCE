@@ -46,7 +46,7 @@
                                 <ul class="flex nav-menu">
                                     <li><a class="active" href="index.html">Home</a></li>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="">Contact</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                     <li><a href="signup.html">Sign Up</a></li>
                                 </ul>
                             </nav>
@@ -713,8 +713,8 @@
                                 <a href="">Shop Now</a>
                             </div>
                         </div>
-                        <div class="flex new-products-sm-about ">
-                            <!-- <div class="col-6"> -->
+                        <div class="flex  ">
+                            
                                 <div class="new-products-sm ">
                                     <img src="img/speaker.svg" alt="speaker" width="210" height="222" loading="lazy"
                                         class="img-resp">
@@ -723,9 +723,8 @@
                                         <p>Amazon wireless speakers</p>
                                         <a href="">Shop Now</a>
                                     </div>
-                                <!-- </div> -->
                             </div>
-                            <!-- <div class="col-6 "> -->
+                            
                                 <div class="new-products-sm  ">
                                     <img src="img/perfume.svg" alt="perfume" width="201" height="222" loading="lazy"
                                         class="img-resp">
@@ -734,7 +733,7 @@
                                         <p>GUCCI INTENSE OUD EDP</p>
                                         <a href="">Shop Now</a>
                                     </div>
-                                <!-- </div> -->
+                                
                             </div>
                         </div>
                     </div>
@@ -742,17 +741,17 @@
             </section>
             <section class="featured">
                 <div class="row align-center">
-                    <div class="col-4 text-center">
+                    <div class="col-4 col-p-12 text-center">
                         <a href="" title="icons"><i class="fa-regular fa-truck"></i></a>
                         <h4>FREE AND FAST DELIVERY</h4>
                         <p>Free delivery for all orders over $140</p>
                     </div>
-                    <div class="col-4 text-center">
+                    <div class="col-4 col-p-12 text-center">
                         <a href="" title="icons"><i class="fa-solid fa-headphones"></i></a>
                         <h4>24/7 CUSTOMER SERVICE</h4>
                         <p>Friendly 24/7 customer support</p>
                     </div>
-                    <div class="col-4 text-center">
+                    <div class="col-4 col-p-12 text-center">
                         <a href="" title="icons"><i class="fa-solid fa-check"></i></a>
                         <h4>MONEY BACK GUARANTEE</h4>
                         <p>We reurn money within 30 days</p>
@@ -824,7 +823,6 @@
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
     <script>
         $(function () {
@@ -851,97 +849,11 @@
                 type: 'image'
             });
 
-            // $(".account").click(function () {
-            //     $(this).toggleClass("active");
-            //     $(".account-dropdown").slideUp();
-            // })
         });
     </script>
 </body>
 
 </html>
 
-<!-- 
-$(".account").click(function(){
-$(this).toggleClass("active");
-$(".account-dropdown").slideToggle();
-});
-$(".account").blur(function(){
-$(this).removeClass("active");
-$(".account-dropdown").slideUp();
-})
-
-$("aside a.drop").click(function(e){
-e.preventDefault();
-
-if($(this).next().is(":visible")){
-$(".cat-dropdown").fadeOut();
-}
-else{
-$(".cat-dropdown").fadeOut(0);
-$(this).next().fadeIn()
-}
-});
-$("aside a").blur(function(){
-$(".cat-dropdown").fadeOut();
-});
-
-if($('.slides').length){
-$(".slides").slick({
-autoplay:true,
-arrows:false,
-dots:true
-});
-
-}
-
-if($('.ticker').length){
-$(".ticker").slick({
-infinite: true,
-slidesToShow: 4,
-slidesToScroll: 4,
-arrows:true
-});
-}
 
 
-
-function saleTimer(date1, date2) {
-// Get total difference in milliseconds and take the absolute value
-let difference_ms = Math.abs(date2.getTime() - date1.getTime());
-
-// Convert milliseconds to seconds
-let delta = difference_ms / 1000;
-
-// Calculate days, hours, minutes, and seconds
-const days = Math.floor(delta / 86400); // Number of seconds in a day (24 * 60 * 60)
-delta -= days * 86400; // Subtract the days in seconds
-
-const hours = Math.floor(delta / 3600) % 24; // Number of seconds in an hour (60 * 60)
-delta -= hours * 3600; // Subtract the hours in seconds
-
-const minutes = Math.floor(delta / 60) % 60; // Number of seconds in a minute
-delta -= minutes * 60; // Subtract the minutes in seconds
-
-const seconds = Math.floor(delta % 60); // Remaining seconds
-
-return {
-days: days,
-hours: hours,
-minutes: minutes,
-seconds: seconds
-};
-}
-
-function saleTime(){
-const startDate = new Date();
-const endDate = new Date(1766639337832+(1000*60*60*24*4));
-const difference = saleTimer(startDate, endDate);
-
-
-if(difference.days<10){$(".days span").html('0'+difference.days)}else{$(".days span").html(difference.days);}
-    if(difference.hours<10){$(".hours span").html('0'+difference.hours)}else{$(".hours span").html(difference.hours);}
-    if(difference.minutes<10){$(".mins span").html('0'+difference.minutes)}else{$(".mins
-    span").html(difference.minutes);} if(difference.seconds<10){$(".secs
-    span").html('0'+difference.seconds)}else{$(".secs span").html(difference.seconds);} } // --- Example Usage ---
-    saleTime(); setInterval(saleTime,1000); -->
