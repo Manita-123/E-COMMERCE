@@ -44,27 +44,25 @@
                         <div class="flex justify-space-bet align-center">
                             <nav>
                                 <ul class="flex nav-menu">
-                                    <li><a class="active" href="index.html">Home</a></li>
-                                    <li><a href="">About</a></li>
-                                    <li><a href="">Contact</a></li>
-                                    <li><a href="signup.html">Sign Up</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="Signin.html">Sign Up</a></li>
                                 </ul>
                             </nav>
                             <div class="flex align-center">
                                 <button class="search" type="button" title="search"><span class="fa fa-magnifying-glass"
                                         aria-hidden="true"></span></button>
-                                    <form action="/search">
-                                        <input type="text" name="search" placeholder="What are you looking for?"
-                                            required>
-                                        <button type="button" title="search"><span class="fa fa-magnifying-glass"
-                                                aria-hidden="true"></span></a>
-                                    </form>
-                                    <button class="wishlist" title="wishlist"><span class="fa-regular fa-heart"
-                                            aria-hidden="true"></button>
-                                    <button type="button" class="cart" title="cart"><span
-                                            class="fa-solid fa-cart-shopping" aria-hidden="true"></span></button>
-                                    <button type="button" class="account" title="account"><span
-                                        class="fa fa-user"></span></button>
+                                <form action="/search">
+                                    <input type="text" name="search" placeholder="What are you looking for?" required>
+                                    <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
+                                            aria-hidden="true"></span></a>
+                                </form>
+                                <a href="wishlist.html" class="wishlist" title="wishlist"><span
+                                        class="fa-regular fa-heart" aria-hidden="true"></a>
+                                <a href="cart.html" class="cart" title="cart"><span class="fa-solid fa-cart-shopping"
+                                        aria-hidden="true"></span></button>
+                                    <a href="#" class="account" title="account"><span class="fa fa-user"></span></a>
                                     <button type="button" class="menu" title="menu"><span class="fa fa-bars"
                                             aria-hidden="true"></span></button>
                             </div>
@@ -76,7 +74,135 @@
     </div>
 
     <div class="wrap-2">
-        <main></main>
+        <main>
+            <div class="container ">
+                <section class="wishlist-desc">
+                    <div class="flex justify-space-bet">
+                        <p>Wishlist &nbsp; (4)</p>
+                        <button type="button" title="Move" class="view-all">Move All To Bag</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 col-m-6 col-p-12">
+                            <section class="product-sm">
+                                <div class="product-img">
+                                    <div class="discount">-35%</div>
+                                    <div class="wishlist"><a href="" title="wishlist"
+                                            class="fa-regular fa-trash-can"></a></div>
+                                    <img src="img/bag.png" alt="Bag" width="178" height="129" loading="lazy"
+                                        class="img-resp">
+                                    <a class="addtocart" href="">Add To Cart</a>
+                                </div>
+                                <div class="product-desc">
+                                    <h3>Gucci duffle bag</h3>
+                                    <p class="price">&dollar;960 <del>&dollar;1160</del></p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-3 col-m-6 col-p-12">
+                            <section class="product-sm">
+                                <div class="product-img">
+                                    <div class="wishlist"><a href="" title="wishlist"
+                                            class="fa-regular fa-trash-can"></a></div>
+                                    <img src="img/musicPlayer.png" alt="Music Player" width="190" height="95"
+                                        loading="lazy" class="img-resp">
+                                    <a class="addtocart" href="">Add To Cart</a>
+                                </div>
+                                <div class="product-desc">
+                                    <h3>RGB liquid CPU Cooler</h3>
+                                    <p class="price">&dollar;1960</p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-3 col-m-6 col-p-12">
+                            <section class="product-sm">
+                                <div class="product-img">
+                                    <div class="wishlist"><a href="" title="wishlist"
+                                            class="fa-regular fa-trash-can"></a></div>
+                                    <img src="img/Shooter_Gamepad.png" alt="Shooter Gamepad" width="178" height="150"
+                                        loading="lazy" class="img-resp">
+                                    <a class="addtocart" href="">Add To Cart</a>
+                                </div>
+                                <div class="product-desc">
+                                    <h3>GP11 Shooter USB Gamepad</h3>
+                                    <p class="price">&dollar;550 </p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-3 col-m-6 col-p-12">
+                            <section class="product-sm">
+                                <div class="product-img">
+                                    <div class="wishlist"><a href="" title="wishlist"
+                                            class="fa-regular fa-trash-can"></a></div>
+                                    <img src="img/jacket.png" alt="jacket" width="182" height="176" loading="lazy"
+                                        class="img-resp">
+                                    <a class="addtocart" href="">Add To Cart</a>
+                                </div>
+                                <div class="product-desc">
+                                    <h3>Quilted Satin Jacket</h3>
+                                    <p class="price">&dollar;750 </p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <section class="category">
+                    <div class="subheading">
+                    <p></p>
+                </div>
+                    <div class="row align-center">
+                        <div class="col-6 col-p-12">
+                        </div>
+                        <div class="col-6 col-p-12">
+                            <button type="button" title="Move" class="view-all">Move All To Bag</button>
+                        </div>
+                    </div>
+                    <div class="row align-center">
+                        <div class="col-2  col-m-4 col-p-6">
+                            <a href="" class="cat-item">
+                                <img src="img/category-computer.svg" alt="computer" loading="lazy" class="img-resp"
+                                    width="56" height="56">
+                                <h3>Computer</h3>
+                            </a>
+                        </div>
+                        <div class="col-2 col-m-4 col-p-6">
+                            <a href="" class="cat-item">
+                                <img src="img/Category-SmartWatch.png" alt="SmartWatch" loading="lazy" class="img-resp"
+                                    width="56" height="56">
+                                <h3>Smart Watch</h3>
+                            </a>
+                        </div>
+                        <div class="col-2 col-m-4 col-p-6">
+                            <a href="" class="cat-item">
+                                <img src="img/Category-Camera.png" alt="camera" loading="lazy" class="img-resp"
+                                    width="56" height="56">
+                                <h3>Camera</h3>
+                            </a>
+                        </div>
+                        <div class="col-2 col-m-4 col-p-6">
+                            <a href="" class="cat-item">
+                                <img src="img/Category-Headphone.png" alt="headPhone" loading="lazy" class="img-resp"
+                                    width="56" height="56">
+                                <h3>HeadPhone</h3>
+                            </a>
+                        </div>
+                        <div class="col-2 col-m-4 col-p-6">
+                            <a href="" class="cat-item">
+                                <img src="img/Category-Gamepad.png" alt="gamePad" loading="lazy" class="img-resp"
+                                    width="56" height="56">
+                                <h3>Gamepad</h3>
+                            </a>
+                        </div>
+                        <div class="col-2 col-m-4 col-p-6">
+                            <a href="" class="cat-item">
+                                <img src="img/category-computer.svg" alt="computer" loading="lazy" class="img-resp"
+                                    width="56" height="56">
+                                <h3>Computer</h3>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
     </div>
 
     <footer>
@@ -139,4 +265,5 @@
         </div>
     </footer>
 </body>
+
 </html>
