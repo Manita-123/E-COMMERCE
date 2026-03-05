@@ -49,10 +49,11 @@
                                     <li><a class="active" href="contact.html">Contact</a></li>
                                     <li><a href="Signin.html">Sign Up</a></li>
                                 </ul>
+                                <select id="mobileMenu" title="mobileMenu">
+                                    <option selected disabled>Menu</option>
+                                </select>
                             </nav>
                             <div class="flex align-center">
-                                <button class="search" type="button" title="search"><span class="fa fa-magnifying-glass"
-                                        aria-hidden="true"></span></button>
                                     <form action="/search">
                                         <input type="text" name="search" placeholder="What are you looking for?"
                                             required>
@@ -63,8 +64,6 @@
                                             aria-hidden="true"></a>
                                     <a href="cart.html" class="cart" title="cart"><span
                                             class="fa-solid fa-cart-shopping" aria-hidden="true"></span></a>
-                                    <button type="button" class="menu" title="menu"><span class="fa fa-bars"
-                                            aria-hidden="true"></span></button>
                             </div>
                         </div>
                     </div>
@@ -164,5 +163,29 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(function(){
+
+            var $menu = $("#mobileMenu");
+            
+            $menu.empty();
+
+            $("nav a").each(function(){
+
+                var text = $(this).text();
+                var link = $(this).attr("href");
+
+                $("#mobileMenu").append(
+                    $("<option></option>").val(link).html(text)
+                );
+            });
+
+            $("#mobileMenu").change(function(){
+                window.location = $(this).val();
+            });
+        })
+    </script>
 </body>
 </html>

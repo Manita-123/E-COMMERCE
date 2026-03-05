@@ -41,23 +41,22 @@
                     <div class="col-9">
                         <div class="flex justify-space-bet align-center">
                             <nav>
-                                <ul class="flex">
+                                <ul class="flex nav-menu">
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="Signin.html">Sign Up</a></li>
                                 </ul>
+                                <select id="mobileMenu" title="mobileMenu">
+                                    <option selected disabled>Menu</option>
+                                </select>
                             </nav>
                             <div class="flex align-center">
-                                <button class="search" type="button" title="search"><span class="fa fa-magnifying-glass"
-                                        aria-hidden="true"></span></button>
                                 <form action="/search">
                                     <input type="text" name="search" placeholder="What are you looking for?" required>
                                     <a href="#" title="search"><span class="fa fa-magnifying-glass"
                                             aria-hidden="true"></span></a>
                                 </form>
-                                <button type="button" class="menu" title="menu"><span class="fa fa-bars"
-                                        aria-hidden="true"></span></button>
                             </div>
                         </div>
                     </div>
@@ -84,7 +83,7 @@
                         <a href="#" class="f-pass">Forget Password?</a></p>
                     </div>
                     <div class="text-center">
-                        <p>Don't have account ? &nbsp;<a href="signup.html">Sign in</a></p>
+                        <p>Don't have account ? &nbsp;<a href="Signin.html">Sign in</a></p>
                     </div>
                 </div>
             </div>
@@ -166,6 +165,30 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(function(){
+
+            var $menu = $("#mobileMenu");
+            
+            $menu.empty();
+
+            $("nav a").each(function(){
+
+                var text = $(this).text();
+                var link = $(this).attr("href");
+
+                $("#mobileMenu").append(
+                    $("<option></option>").val(link).html(text)
+                );
+            });
+
+            $("#mobileMenu").change(function(){
+                window.location = $(this).val();
+            });
+        })
+    </script>
 </body>
 
 </html>

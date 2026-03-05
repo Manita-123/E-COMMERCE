@@ -49,34 +49,21 @@
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="Signin.html">Sign Up</a></li>
                                 </ul>
+                                <select id="mobileMenu" title="mobileMenu">
+                                    <option selected disabled>Menu</option>
+                                </select>
                             </nav>
                             <div class="flex align-center">
-                                <button class="search" type="button" title="search"><span class="fa fa-magnifying-glass"
-                                        aria-hidden="true"></span></button>
                                     <form action="/search">
                                         <input type="text" name="search" placeholder="What are you looking for?"
                                             required>
                                         <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
-                                                aria-hidden="true"></span></a>
+                                            aria-hidden="true"></span></a>
                                     </form>
                                     <a href="wishlist.html" class="wishlist" title="wishlist"><span class="fa-regular fa-heart"
                                             aria-hidden="true"></a>
                                     <a href="cart.html" class="cart" title="cart"><span
                                             class="fa-solid fa-cart-shopping" aria-hidden="true"></span></a>
-                                    <a class="menu" title="menu"><span class="fa fa-bars"
-                                            aria-hidden="true"></span></a>
-                                    <!-- <div class="account-dropdown">
-                                        <ul>
-                                            <li><a href=""><span class="fa fa-user"></span> Account</a></li>
-                                            <li><a href=""><span class="fa fa-bag-shopping"></span> My Orders</a></li>
-                                            <li><a href=""><span class="fa fa-circle-xmark"></span> My Cancellations</a>
-                                            </li>
-                                            <li><a href=""><span class="fa fa-star"></span>My Reviews</a></li>
-                                            <li><a href=""><span
-                                                        class="fas fa-arrow-right-from-bracket fa-rotate-180"></span>Signout</a>
-                                            </li>
-                                        </ul>
-                                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -821,21 +808,9 @@
 
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
 
     <script>
         $(function () {
-            $(".hamburger").click(function () {
-                $(".nav-menu").slideDown();
-                $(this).hide();
-                $(".cross").show();
-            });
-
-            $(".cross").click(function () {
-                $(".nav-menu").slideUp();
-                $(this).hide();
-                $(".hamburger").show();
-            });
 
             $(".slider").bxSlider({
                 controls: false,
@@ -844,8 +819,22 @@
                 autoHover: true,
             });
 
-            $('.popup-image').magnificPopup({
-                type: 'image'
+            var $menu = $("#mobileMenu");
+            
+            $menu.empty();
+
+            $("nav a").each(function(){
+
+                var text = $(this).text();
+                var link = $(this).attr("href");
+
+                $("#mobileMenu").append(
+                    $("<option></option>").val(link).html(text)
+                );
+            });
+
+            $("#mobileMenu").change(function(){
+                window.location = $(this).val();
             });
 
         });

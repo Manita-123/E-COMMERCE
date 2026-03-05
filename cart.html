@@ -46,24 +46,21 @@
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="signup.html">Sign Up</a></li>
                                 </ul>
+                                <select id="mobileMenu" title="mobileMenu">
+                                    <option selected disabled>Home</option>
+                                </select>
                             </nav>
                             <div class="flex align-center">
-                                <button class="search" type="button" title="search"><span class="fa fa-magnifying-glass"
-                                        aria-hidden="true"></span></button>
-                                    <form action="/search">
-                                        <input type="text" name="search" placeholder="What are you looking for?"
-                                            required>
-                                        <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
-                                                aria-hidden="true"></span></a>
-                                    </form>
-                                    <a href="wishlist.html" class="wishlist" title="wishlist"><span class="fa-regular fa-heart"
-                                            aria-hidden="true"></a>
-                                    <a href="cart.html" class="cart" title="cart"><span
-                                            class="fa-solid fa-cart-shopping" aria-hidden="true"></span></a>
-                                    <a class="account" title="account"><span
-                                        class="fa fa-user"></span></a>
-                                    <button type="button" class="menu" title="menu"><span class="fa fa-bars"
-                                            aria-hidden="true"></span></button>
+                                <form  action="/search">
+                                    <input type="text" name="search" placeholder="What are you looking for?" required>
+                                    <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
+                                            aria-hidden="true"></span></a>
+                                </form>
+                                <a href="wishlist.html" class="wishlist" title="wishlist"><span
+                                        class="fa-regular fa-heart" aria-hidden="true"></a>
+                                <a href="cart.html" class="cart" title="cart"><span class="fa-solid fa-cart-shopping"
+                                        aria-hidden="true"></span></a>
+                                <a class="account" title="account"><span class="fa fa-user"></span></a>
                             </div>
                         </div>
                     </div>
@@ -81,8 +78,8 @@
             <div class="cart-desc ">
                 <div class="card flex justify-space-bet align-center">
                     <p>Product</p>
-                    <p class="shift-1">Price</p>
-                    <p class="shift-2">Quantity</p>
+                    <p class=" shift shift-1">Price</p>
+                    <p class=" shift shift-2">Quantity</p>
                     <p>Subtotal</p>
                 </div>
                 <div class="card flex justify-space-bet align-center">
@@ -91,7 +88,7 @@
                         <p>LCD Monitor</p>
                     </figure>
                     <p>&dollar;650</p>
-                    <input type="number" value="01" placeholder="0">
+                    <input type="number" value="05" placeholder="0">
                     <p>&dollar;650</p>
                 </div>
                 <div class="card flex justify-space-bet align-center">
@@ -100,7 +97,7 @@
                         <p>Hi Gamepad</p>
                     </figure>
                     <p>&dollar;550</p>
-                    <input type="number" value="02" placeholder="0">
+                    <input type="number" value="05" placeholder="0">
                     <p>&dollar;1100</p>
                 </div>
             </div>
@@ -108,31 +105,41 @@
                 <button type="button" title="Shop" class="view-all-products btn-black">Return To Shop</button>
                 <button type="button" title="Cart" class="view-all-products btn-black">Update Cart</button>
             </div>
-            <div class="flex">
-                <input type="text" placeholder="Coupon Code">
-                <button type="button" title="Coupon" class="view-all btn-re">Apply Coupon</button>
-                <div class="cart-about">
-                    <h4>Card Total</h4>
-                    <div class="flex">
-                        <p>SubTotal:</p>
-                        <p>&dollar; 1750</p>
+            <div class="grid  justify-space-bet cart-details ">
+                <div class="col-6">
+                    <div class="flex cart-detail ">
+                        <input type="text" placeholder="Coupon Code">
+                        <button type="button" title="Coupon" class="view-all btn-red">Apply Coupon</button>
                     </div>
-                    <div class="flex">
-                        <p>shipping:</p>
-                        <p>Free</p>
-                    </div>
-                    <div class="flex">
-                        <p>Total:</p>
-                        <p>&dollar;1750</p>
-                    </div>
-                    <button type="button" title="Cart" class="view-all-products btn-red">Process To Checkout</button>
                 </div>
+                <div class="col-6">
+                    <div class="cart-about">
+                        <h4>Card Total</h4>
+                        <div class="flex justify-space-bet">
+                            <p>SubTotal:</p>
+                            <p>&dollar; 1750</p>
+                        </div>
+                        <hr>
+                        <div class="flex justify-space-bet">
+                            <p>shipping:</p>
+                            <p>Free</p>
+                        </div>
+                        <hr>
+                        <div class="flex justify-space-bet">
+                            <p>Total:</p>
+                            <p>&dollar;1750</p>
+                        </div>
+                        <button type="button" title="Cart" class="view-all-products btn-red">Process To
+                            Checkout</button>
+                    </div>
+                </div>
+
             </div>
         </div>
-        
+
     </main>
 
-        <footer>
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-3 col-m-6 ">
@@ -191,6 +198,31 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(function () {
+
+            var $menu = $("#mobileMenu");
+            
+            $menu.empty();
+
+
+            $("nav a").each(function(){
+
+                var text = $(this).text();
+                var link = $(this).attr("href");
+
+                $menu.append(
+                    $("<option></option>").val(link).html(text)
+                );
+            });
+
+            $("#mobileMenu").change(function(){
+                window.location = $(this).val();
+            });
+        })
+    </script>
 </body>
 
 </html>
