@@ -13,16 +13,20 @@ html{
 
 textarea{width: 100%; height: 100px; }
 
-body{ font: 16px var(--ff)}
+body{ font: 16px var(--ff); overflow-x: hidden;}
 
 .container{ max-width: 1200px; margin: auto; padding: 0 1rem;}
-.row{ display: grid; grid-template-columns: repeat(12,1fr); gap: 2rem;}
+.row{ display: grid; grid-template-columns: repeat(12,1fr); gap: 2rem; width: 100%;}
+
+.row > *{
+    min-width:0;
+}
 .col-1{ grid-column: span 1;}
 .col-2{ grid-column: span 2;}
 .col-3{ grid-column: span 3;}
 .col-4{ grid-column: span 4;}
 .col-5{ grid-column: span 5;}
-.col-6{ grid-column: span 6;}
+.col-6{ grid-column: span 6; min-width: 0;}
 .col-7{ grid-column: span 7;}
 .col-8{ grid-column: span 8;}
 .col-9{ grid-column: span 9;}
@@ -35,7 +39,7 @@ body{ font: 16px var(--ff)}
 .justify-space-bet{ justify-content: space-between;}
 .justify-space-even{ justify-content: space-evenly;}
 .align-center{ align-items: center;}
-.img-resp{ max-width: 100%; height: auto;}
+.img-resp{ max-width: 100%; height: auto; display: block;}
 .text-center{ text-align: center;}
 
 .btn-red{ background: #f77055; color: #fff; border: none;}
@@ -66,7 +70,7 @@ nav a.active{text-decoration: underline #808080;}
 header form{background: #f5f5f5;width: 243px; height: 38px; position: relative;padding: 10px 20px;}
 header form input{background: none; border: none; width: 100%; height: 100%;}
 header form input:focus{outline: none;}
-header form a{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%);border: none; color: #000; }
+header form a , header form button{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%);border: none; color: #000; }
 header :is(.wishlist,.cart,.menu,.search, .account){background: none; border: none; width: 32px; height: 32px; margin-left: 12px; color: #000; padding-top: 10px;}
 
 .banner aside{padding:40px 27px 0 0; border-right: .5px solid #0000004d;}
@@ -120,6 +124,7 @@ h2{font: 600 36px var(--ff);}
 .full-width-ad{ margin: 60px 0 71px; padding: 30px; background: #000;}
 .full-width-ad p{font-weight: 600; line-height: 36px; color:#00FF66 ;}
 .full-width-ad h2{line-height: 40px; color: #fff; padding: 32px 0;}
+.full-width-ad img{width: 90%;}
 
 .timing li{margin-right: 24px;}
 .full-width-ad li a{display: block; height: 62px; width: 62px; border-radius: 50%; background: #fff; text-align: center; color: #000;}
@@ -134,8 +139,8 @@ h2{font: 600 36px var(--ff);}
 .new-arrival{ margin: 140px 0;}
 .new-arrival .flex{gap: 1rem;}
 [class^="new-products"]{background: #000; color: #fff; position: relative;  overflow: hidden; border-radius: 4px; margin-top: 60px;  }
-.new-products-lg{  padding: 89px 30px 0 0; }
-.new-products-sm{ padding: 32px; margin-top: 2rem; } 
+.new-products-lg{  padding: 89px 32px 0 0; }
+.new-products-sm{ padding: 35px; margin-top: 5rem; } 
 .product-desc-over{ position: absolute; left: 30px; bottom: 32px; } 
 .product-desc-over h3{ font-size: 24px;}
 .product-desc-over p{ margin: 10px 0;} 
@@ -254,6 +259,7 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     .banner aside li:not(:last-child){margin-bottom: 7px;}
     .banner aside li a{line-height: 20px;}
     .contact a{ margin:1rem 20rem ;} 
+    .new-products-sm{margin-top: 2rem;}
 }
 
 @media screen and (max-width:787px){
@@ -275,7 +281,7 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     .desc form input{margin: 0.5rem 0;}
     .profile img {height: 16rem; padding: 1rem 1rem 0 1rem;}
     .profile h3 {font-size: 24px;}
-    [class^="new-products"]{margin-top: 1.4rem;}
+    .new-products-sm{margin-top: 1.4rem;}
     .signup h3{ margin: 0 ; font-style: 20px;}
     .desc{margin-right:0;}
     .contact{margin-left:20px;}
@@ -301,15 +307,17 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     header form{display: none;}
     .search{display: inline-block;}
     .hide-p{ display: none;}
-    [class^="new-products"]{margin-top: 2rem; }
+    .new-products-sm{margin-top: 1.7rem;}
     .product-desc-over h3{ font-size: 14px;}
     .contact form input{ width: 100%;}
     .contact a{ margin:1rem 0 ;} 
     .nav-menu{display:none;}
-    #mobileMenu{ display: block; width: 100%; padding: 10px; border-radius: 20px; color:rgb(172, 164, 164); margin-left: 2rem;}
+    #mobileMenu{ display: block; width: 100%; padding: 10px; border-radius: 20px; color:rgb(172, 164, 164); margin-left: 1.5rem;}
     .shift{margin: 0;}
     .cart-desc .card{padding: 20px 0;}
     .cart-desc+div{gap: 2rem;}
     header :is(.wishlist,.cart,.menu,.search, .account){margin-left: 2px;}
-
+    .timing li{margin-right: 10px;}
+    .full-width-ad li a{height: 56px; width: 59px;}
+    .signup{ margin: 4rem 4rem 4rem 0;}
 }

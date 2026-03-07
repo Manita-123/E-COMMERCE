@@ -51,11 +51,14 @@
                                 </select>
                             </nav>
                             <div class="flex align-center">
-                                    <form action="/search">
-                                        <input type="text" name="search" placeholder="What are you looking for?"
+                                    <form action="/search" id="searchForm">
+                                        <input type="text" name="search" id="searchInput" placeholder="What are you looking for?"
                                             required>
-                                        <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
-                                                aria-hidden="true"></span></a>
+                                        <button type="submit" title="search" class=".search">
+                                            <span class="fa fa-magnifying-glass"></span>
+                                        </button>
+                                        <!-- <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
+                                                aria-hidden="true"></span></a> -->
                                     </form>
                                     <a href="wishlist.html" class="wishlist" title="wishlist"><span class="fa-regular fa-heart"
                                             aria-hidden="true"></a>
@@ -245,6 +248,8 @@
         </div>
     </footer>
 
+
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script>
         $(function(){

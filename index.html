@@ -440,7 +440,7 @@
                         <a href="" class="buy-now text-center">Buy Now!</a>
                     </div>
                     <div class="col-6 col-m-12 order-m-1">
-                        <img src="img/Ads.svg" alt="Ads" width="568" height="330" loading="lazy" class="img-resp">
+                        <img src="img/Ads.png" alt="Ads"  loading="lazy" class="img-resp">
                     </div>
                 </div>
             </section>
@@ -825,7 +825,7 @@
 
             $("nav a").each(function(){
 
-                var text = $(this).text();
+                var text = $(this).text(); 
                 var link = $(this).attr("href");
 
                 $("#mobileMenu").append(
@@ -833,7 +833,7 @@
                 );
             });
 
-            $("#mobileMenu").change(function(){
+            $menu.change(function(){
                 window.location = $(this).val();
             });
 
