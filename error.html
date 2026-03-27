@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Error</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -42,7 +42,7 @@
                             <nav>
                                 <ul class="flex nav-menu">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a class="active" href="about.html">About</a></li>
+                                    <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="Signin.html">Sign Up</a></li>
                                 </ul>
@@ -72,23 +72,24 @@
     </div>
 
     <main>
-        <div class="container About-us">
+        <div class="container error-desc ">
             <section class="nav-section">
-                <a class="inactive" href="index.html">Home</a>/
+                <a class="inactive" href="index.html">Home</a>&nbsp;/&nbsp;
                 <a href="">404 ERROR </a>
             </section>
-            <h1>404 Not Found</h1>
-            <p>Your visited page not found. You may go home page.</p>
-            <a href="index.html" type="button" title="Cart" class="view-all-products btn-red">Back to Home</button>
+            <div class="flex align-center">
+                <h1>404 Not Found</h1>
+                <p>Your visited page not found. You may go home page.</p>
+                <a href="index.html" type="button" title="Cart" class="view-all-products btn-red">Back to Home</a>
+            </div>
         </div>
     </main>
-
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-3 col-m-6 ">
-                    <h1>Exclusive</h1>
+                    <h4>Exclusive</h4>
                     <h3>Subscribe</h3>
                     <p><a href="">Get 10% off Your first order</a></p>
                     <form action="/search">
@@ -144,6 +145,8 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
+
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script>
         $(function(){
@@ -166,7 +169,7 @@
                 window.location = $(this).val();
             });
         })
-    </script>
+    </script> 
 </body>
 
 </html>

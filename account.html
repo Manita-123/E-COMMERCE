@@ -47,14 +47,18 @@
                                     <li><a href="Signin.html">Sign Up</a></li>
                                 </ul>
                                 <select id="mobileMenu" title="mobileMenu">
-                                    <option selected disabled>Home</option>
+                                    <option selected disabled>Menu</option>
                                 </select>
                             </nav>
                             <div class="flex align-center">
-                                <form  action="/search" id="searchForm">
-                                    <input type="text" name="search" placeholder="What are you looking for?" id="searchInput" required>
-                                    <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
-                                            aria-hidden="true"></span></a>
+                                <form action="/search" id="searchForm">
+                                    <input type="text" name="search" id="searchInput"
+                                        placeholder="What are you looking for?" required>
+                                    <button type="submit" title="search" class=".search">
+                                        <span class="fa fa-magnifying-glass"></span>
+                                    </button>
+                                    <!-- <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
+                                                aria-hidden="true"></span></a> -->
                                 </form>
                                 <a href="wishlist.html" class="wishlist" title="wishlist"><span
                                         class="fa-regular fa-heart" aria-hidden="true"></a>
@@ -69,74 +73,72 @@
         </header>
     </div>
 
-    <main>
-        <div class="container ">
+    <div class="wrap-2">
+        <div class="container">
             <section class="nav-section">
-                <a class="inactive" href="index.html">Home</a> &nbsp;/ &nbsp;
-                <a href="">Cart</a>
+                <a class="inactive" href="index.html">Home</a> &nbsp; / &nbsp;
+                <a href="account.html">My Account</a>
             </section>
-            <div class="cart-desc ">
-                <div class="card flex justify-space-bet align-center">
-                    <p>Product</p>
-                    <p class=" shift shift-1">Price</p>
-                    <p class=" shift shift-2">Quantity</p>
-                    <p>Subtotal</p>
+
+            <div class="row Account">
+                <div class="col-4">
+                    <aside>
+                        <p>Manage My Account</p>
+                        <ul class="flex">
+                            <li><a class="start" href="profile.html">My Profile</a></li>
+                            <li><a href="#">Address Book</a></li>
+                            <li><a href="#">My Payment Options</a></li>
+                        </ul>
+                        <p>My Orders</p>
+                        <ul class="flex">
+                            <li><a href="#">My Returns</a></li>
+                            <li><a href="#">My Cncellations</a></li>
+                        </ul>
+                        <p>My Wishlist</p>
+                    </aside>
                 </div>
-                <div class="card flex justify-space-bet align-center">
-                    <figure class="flex">
-                        <img src="img/miniTV.png" alt="miniTV" width="50" height="39"> &nbsp; &nbsp;
-                        <p>LCD Monitor</p>
-                    </figure>
-                    <p>&dollar;650</p>
-                    <input type="number" value="05" placeholder="0">
-                    <p>&dollar;650</p>
-                </div>
-                <div class="card flex justify-space-bet align-center">
-                    <figure class="flex">
-                        <img src="img/miniGamepad.png" alt="miniGamepad" width="49" height="43"> &nbsp; &nbsp;
-                        <p>Hi Gamepad</p>
-                    </figure>
-                    <p>&dollar;550</p>
-                    <input type="number" value="05" placeholder="0">
-                    <p>&dollar;1100</p>
-                </div>
-            </div>
-            <div class="flex  justify-space-bet">
-                <button type="button" title="Shop" class="view-all-products btn-black">Return To Shop</button>
-                <button type="button" title="Cart" class="view-all-products btn-black">Update Cart</button>
-            </div>
-            <div class="row ">
-                <div class="col-6 col-m-12">
-                    <div class="flex cart-detail ">
-                        <input type="text" placeholder="Coupon Code">
-                        <button type="button" title="Coupon" class="view-all btn-red">Apply Coupon</button>
+                <div class="col-8 col-m-12">
+                    <form>
+                        <h3>Edit your profile</h3>
+                        <div class="flex ">
+                            <div class="  input-box flex">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" placeholder="Md" required>
+                            </div>
+                            <div class="  input-box flex">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" placeholder="Rimel" required>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="  input-box flex">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="rimel@gmail.com" required>
+                            </div>
+                            <div class="input-box flex">
+                                <label for="add">Address</label>
+                                <input type="text" id="add" placeholder="New Delhi , India" required>
+                            </div>
+                        </div>
+                        <div class=" pwds">
+                            <label for="pass">Password Changes</label>
+                            <br>
+                            <br>
+                            <input type="password" id="pwd" placeholder="Current Password" required>
+                            <input  type="password" id="psw" placeholder="New Password" required>
+                            <input type="password" id="pass" placeholder="Confirm New Password" required>
+                        </div>
+                    </form>
+                    <div class="flex justify-right align-center">
+                        <div class="flex cancel-btn"><a  href="#">Canel</a></div>
+                    <div class="flex justify-space-even"><a href="" class="view-all-products btn-red ">Save Changes</a>
+                    </div>
                     </div>
                 </div>
-                <div class="col-6 col-m-12 cart-about">
-                        <h4>Card Total</h4>
-                        <div class="flex justify-space-bet">
-                            <p>SubTotal:</p>
-                            <p>&dollar; 1750</p>
-                        </div>
-                        <hr>
-                        <div class="flex justify-space-bet">
-                            <p>shipping:</p>
-                            <p>Free</p>
-                        </div>
-                        <hr>
-                        <div class="flex justify-space-bet">
-                            <p>Total:</p>
-                            <p>&dollar;1750</p>
-                        </div>
-                        <button type="button" title="Cart" class="view-all-products btn-red">Process To
-                            Checkout</button>
-                    
-                </div>
-
             </div>
         </div>
+    </div>
 
-    </main>
 
     <footer>
         <div class="container">
@@ -199,27 +201,25 @@
     </footer>
 
     <script src="script.js"></script>
-
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script>
         $(function () {
 
             var $menu = $("#mobileMenu");
-            
+
             $menu.empty();
 
-
-            $("nav a").each(function(){
+            $("nav a").each(function () {
 
                 var text = $(this).text();
                 var link = $(this).attr("href");
 
-                $menu.append(
+                $("#mobileMenu").append(
                     $("<option></option>").val(link).html(text)
                 );
             });
 
-            $("#mobileMenu").change(function(){
+            $("#mobileMenu").change(function () {
                 window.location = $(this).val();
             });
         })

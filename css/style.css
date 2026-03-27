@@ -18,35 +18,7 @@ body{ font: 16px var(--ff); overflow-x: hidden;}
 .container{ max-width: 1200px; margin: auto; padding: 0 1rem;}
 .row{ display: grid; grid-template-columns: repeat(12,1fr); gap: 2rem; width: 100%;}
 
-.row > *{
-    min-width:0;
-}
-.col-1{ grid-column: span 1;}
-.col-2{ grid-column: span 2;}
-.col-3{ grid-column: span 3;}
-.col-4{ grid-column: span 4;}
-.col-5{ grid-column: span 5;}
-.col-6{ grid-column: span 6; min-width: 0;}
-.col-7{ grid-column: span 7;}
-.col-8{ grid-column: span 8;}
-.col-9{ grid-column: span 9;}
-.col-10{ grid-column: span 10;}
-.col-11{ grid-column: span 11;}
-.col-12{ grid-column: span 12;}
-.row-6{grid-row: span 6;}
-.flex{ display: flex;}
-.justify-right{ justify-content: right;}
-.justify-space-bet{ justify-content: space-between;}
-.justify-space-even{ justify-content: space-evenly;}
-.align-center{ align-items: center;}
-.img-resp{ max-width: 100%; height: auto; display: block;}
-.text-center{ text-align: center;}
-
-.btn-red{ background: #f77055; color: #fff; border: none;}
-.btn-black{ color: #000; background: #fff; }
-.bloom{color: #ba6d5d ; }
-
-/* layout */
+/* header */
 .topnav{ line-height: 48px; background: #000; color: #fff; padding: 0 1rem;}
 .topnav p{ font-size: 14px; font-weight: 400; white-space: nowrap;}
 .topnav a{color: inherit; text-decoration: underline; }
@@ -54,11 +26,9 @@ body{ font: 16px var(--ff); overflow-x: hidden;}
 .topnav .sale{ overflow-x: auto; margin-right: 1rem;}
 .topnav select:hover{ background: #000;}
 
-/* nav menu */
 nav li:hover a  {text-decoration: underline #f0b7bc;}
 nav li:active a{background:#9c9997;}
 #mobileMenu{display: none;}
-
 
 header{ border-bottom: solid 0.5px #0000004d; padding: 40px 0 16px;}
 header h1{ font-size: 24px; line-height: 1;}
@@ -73,6 +43,8 @@ header form input:focus{outline: none;}
 header form a , header form button{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%);border: none; color: #000; }
 header :is(.wishlist,.cart,.menu,.search, .account){background: none; border: none; width: 32px; height: 32px; margin-left: 12px; color: #000; padding-top: 10px;}
 
+
+
 .banner aside{padding:40px 27px 0 0; border-right: .5px solid #0000004d;}
 .banner aside li:not(:last-child){ margin-bottom: 13px;}
 .banner aside a{ font: 400 16px var(--ff); line-height: 22px; color: #000; display: block; } 
@@ -84,8 +56,6 @@ header :is(.wishlist,.cart,.menu,.search, .account){background: none; border: no
 .banner .bx-wrapper .bx-pager.bx-default-pager a{background: #6b5f5f;}
 .banner .slide a.shop{color:#fff; position: absolute; bottom: 52px; left: 67px ; text-decoration: underline;} 
 
-.hamburger, .cross {display: none; font-size: 26px; cursor: pointer; }
-.hamburger:hover{ display: block;}
 nav li:hover a{text-decoration: underline #7d7d7d;}
 nav li:active a{background:#7d7d7d;}
 
@@ -152,35 +122,45 @@ h2{font: 600 36px var(--ff);}
 .featured p{font-size: 14px; font-weight: 400;}
 
 
-footer{ background: #000; color: #fff;padding: 80px 0 24px;}
-footer h3{font-size: 24px; margin-bottom: 24px;}
-footer p{margin: 10px 0;}
-footer a{color: inherit;}
-footer form{position: relative; border: 1.5px solid #fff; border-radius: 4px;}
-footer form input{width: 100%; background: none; border: none; height: 48px; color: #fff;}
-footer form button{position: absolute; right: 17px; top: 50%; transform: translateY(-50%); background: none; border: none; color: inherit;}
-footer form input::placeholder{color: #fff5;}
-footer form input:focus{outline: none;}
-.copy{color: #3d3d3d; border-top: 1px solid #fff5; padding: 5px 0; margin-top: 60px;}
-.downloads{margin: 12px 0 24px;}
-.playstore,  .appstore{display: block; width: 134px; line-height: 15px; border: 1px solid #fff; border-radius: 4px; margin: 0 0 10px 10px;}
-.playstore span, .appstore span{font-size: 10px; }
 
-/* signup page */
-.wrap-2{border-top: 1px solid #000;}
-.signup{ margin: 4rem 6.5rem 8.8rem 0;}
-.signup .flex{flex-direction: column; }
-.desc{margin-right: 5.5rem;}
-.sign-para{margin-bottom: 1.5rem;}
-.desc form input{margin: 1.2rem 0; border: none ; border-bottom: 2px solid #000; opacity: 0.6; width: 100%; }
-.signup h3{font:500 36px var(--ff); margin:50px 0 24px; line-height: 30px;}
-.signup-desc .create-acc{ display: block; color: #fff; background:#DB4444 ; padding: 0.7rem 0; border-radius: 5px; margin: 0.4rem 0 0.2rem 0; }
-.signup-desc .sign-w-g{border: solid 1px #000; margin: 0.8rem 0; padding: 0.8rem 0; }
 
-/* login page */
-.login-desc{display: flex; margin: 1rem 0 2rem 0;}
-.login-acc{display: inline-block; color: #fff; background-color: #DB4444; padding: 0.7rem 0; border-radius: 5px; width: 9rem;}
-.f-pass{color: #DB4444; margin: 0.5rem 0 0 3rem; text-align: center;}
+/* wishlist page */
+.wishlist-desc{margin: 6rem 0  9rem 0;}
+.wishlist-desc .flex{margin-bottom: 30px;}
+.wishlist-desc .subheading p{color: #000;}
+
+
+
+
+/* contact-page */
+.contact-info{margin: 60px 0 0;}
+.contact-info i{color: #fff; height: 40px; width: 40px; background: #c0462d; border-radius: 50%; padding-top: 10px;}
+.contact-info p{margin: 1.5rem 0;}
+.contact-info>div{align-self: center;}
+.contact form input{ background-color: #f5f5f5; min-width:30%; height: 3rem; border: none; margin-bottom: 40px;}
+.contact .flex{width: 100%; justify-content: space-between; flex-flow: wrap;}
+.contact{margin-left: 80px;}
+.contact a{background: #c0462d; line-height: 51px; width: 185px;border-radius: 10px; display: block; margin:1rem 0 0 28rem ; color: #fff; font-size: 20px; font-weight: 500;}
+.cont{white-space: nowrap; align-self:center;}
+.cont a{display: block; margin: 1rem;}
+.cont-option{flex-flow: nowrap; gap: 2rem;}
+textarea{background: #f5f5f5;border: none; height: 10rem;}
+
+/* Cart page */
+.cart-desc{margin: 5rem 0 1.5rem 0;}
+.cart-desc .card{padding: 24px 40px; box-shadow: 0 0 18px #0000001a; margin-bottom: 40px;}
+.cart-desc input{border: 2px solid rgba(0,0,0,0.5); width: 10%;height: 44px;}
+.shift-1{margin-left: 8rem;}
+.shift-2{margin-left: 1rem;}
+.cart-desc+div{margin-bottom:5rem ;}
+.cart-detail{gap: 2rem; display: inline-flex; }
+.cart-detail input , .cart-detail button{max-width: 211px; height: 56px; padding: 0 20px;}
+.cart-about{margin-left: 13rem;}
+.cart-about{border: solid 1px #000; padding: 20px ; margin-bottom: 140px; max-width:470px;}
+.cart-about button{padding: 0 20px;}
+.cart-about .flex{margin:1rem;} 
+
+
 
 /* about page */
 .About-us .p1{margin: 24px 20px 0 0;}
@@ -208,37 +188,89 @@ footer form input:focus{outline: none;}
 .pager a.active{width: 14px; height: 14px; background: #fff; border: 2.5px solid #DB4444; border-radius: 4px; border-radius: 50%;}
 
 
-/* contact-page */
-.contact-info{margin: 60px 0 0;}
-.contact-info i{color: #fff; height: 40px; width: 40px; background: #c0462d; border-radius: 50%; padding-top: 10px;}
-.contact-info p{margin: 1.5rem 0;}
-.contact-info>div{align-self: center;}
-.contact form input{ background-color: #f5f5f5; min-width:30%; height: 3rem; border: none; margin-bottom: 40px;}
-.contact .flex{width: 100%; justify-content: space-between; flex-flow: wrap;}
-.contact{margin-left: 80px;}
-.contact a{background: #c0462d; line-height: 51px; width: 185px;border-radius: 10px; display: block; margin:1rem 0 0 28rem ; color: #fff; font-size: 20px; font-weight: 500;}
-.cont{white-space: nowrap; align-self:center;}
-.cont a{display: block; margin: 1rem;}
-.cont-option{flex-flow: nowrap; gap: 2rem;}
-textarea{background: #f5f5f5;border: none; height: 10rem;}
 
-/* wishlist page */
-.wishlist-desc{margin: 6rem 0  9rem 0;}
-.wishlist-desc .flex{margin-bottom: 30px;}
-.wishlist-desc .subheading p{color: #000;}
 
-/* Cart page */
-.cart-desc{margin: 5rem 0 1.5rem 0;}
-.cart-desc .card{padding: 24px 40px; box-shadow: 0 0 18px #0000001a; margin-bottom: 40px;}
-.cart-desc input{border: 2px solid rgba(0,0,0,0.5); width: 10%;height: 44px;}
-.shift-1{margin-left: 8rem;}
-.shift-2{margin-left: 1rem;}
-.cart-desc+div{margin-bottom:5rem ;}
-.cart-detail{gap: 2rem; display: inline-flex; }
-.cart-detail input , .cart-detail button{max-width: 211px; height: 56px; padding: 0 20px;}
-.cart-about{border: solid 1px #000; padding: 20px ; margin-bottom: 140px; max-width:470px;}
-.cart-about button{padding: 0 20px;}
-.cart-about .flex{margin:1rem;}
+/* signup page */
+.wrap-2{border-top: 1px solid #000;}
+.signup{ margin: 4rem 6.5rem 8.8rem 0;}
+.signup .flex{flex-direction: column; }
+.desc{margin-right: 5.5rem;}
+.sign-para{margin-bottom: 1.5rem;}
+.desc form input{margin: 1.2rem 0; border: none ; border-bottom: 2px solid #000; opacity: 0.6; width: 100%; }
+.signup h3{font:500 36px var(--ff); margin:50px 0 24px; line-height: 30px;}
+.signup-desc .create-acc{ display: block; color: #fff; background:#DB4444 ; padding: 0.7rem 0; border-radius: 5px; margin: 0.4rem 0 0.2rem 0; }
+.signup-desc .sign-w-g{border: solid 1px #000; margin: 0.8rem 0; padding: 0.8rem 0; }
+
+
+
+/* login page */
+.login-desc{display: flex; margin: 1rem 0 2rem 0;}
+.login-acc{display: inline-block; color: #fff; background-color: #DB4444; padding: 0.7rem 0; border-radius: 5px; width: 9rem;}
+.f-pass{color: #DB4444; margin: 0.5rem 0 0 3rem; text-align: center;}
+
+/* footer */
+footer{ background: #000; color: #fff;padding: 80px 0 24px;}
+footer h3{font-size: 24px; margin-bottom: 24px;}
+footer p{margin: 10px 0;}
+footer a{color: inherit;}
+footer form{position: relative; border: 1.5px solid #fff; border-radius: 4px;}
+footer form input{width: 100%; background: none; border: none; height: 48px; color: #fff;}
+footer form button{position: absolute; right: 17px; top: 50%; transform: translateY(-50%); background: none; border: none; color: inherit;}
+footer form input::placeholder{color: #fff5;}
+footer form input:focus{outline: none;}
+.copy{color: #3d3d3d; border-top: 1px solid #fff5; padding: 5px 0; margin-top: 60px;}
+.downloads{margin: 12px 0 24px;}
+.playstore,  .appstore{display: block; width: 134px; line-height: 15px; border: 1px solid #fff; border-radius: 4px; margin: 0 0 10px 10px;}
+.playstore span, .appstore span{font-size: 10px; }
+
+/* error page */
+.error-desc{margin-bottom: 140px;}
+.error-desc .flex{flex-flow: column; gap: 20px;}
+.error-desc h1{font-weight: 550; font-size: 82px;}
+.error-desc a{margin-top: 2rem;}
+
+
+/* Account page */
+.Account{margin: 4rem 0 6rem 0;}
+.Account aside p{font-size: 1.2rem; font-weight: 600; }
+.Account aside ul{padding:0 0 0 20px ; gap:1rem; flex-direction: column; margin: 20px 0; }
+.Account aside a{color: #666;}
+.Account aside a.start{color: #e07a66;}
+
+.Account h3{font-size: 1.6rem; color: #e53935; margin-bottom: 20px;}
+.Account {padding: 0 2.5rem 1rem 0;}
+.Account form{margin-top: 4rem;}
+.Account form>.flex{gap: 2rem;}
+.Account form .input-box.flex{flex-direction: column; flex-wrap: wrap; width: 50%;}
+.Account form  input{ background-color: #f3f3f3; border: none; margin-bottom: 2rem; padding: 1rem;}
+.Account .pwds input{width: 100%; margin-bottom: 12px;}
+.cancel-btn a{margin-right: 2rem; color: #000;}
+
+
+.col-1{ grid-column: span 1;}
+.col-2{ grid-column: span 2;}
+.col-3{ grid-column: span 3;}
+.col-4{ grid-column: span 4;}
+.col-5{ grid-column: span 5;}
+.col-6{ grid-column: span 6;}
+.col-7{ grid-column: span 7;}
+.col-8{ grid-column: span 8;}
+.col-9{ grid-column: span 9;}
+.col-10{ grid-column: span 10;}
+.col-11{ grid-column: span 11;}
+.col-12{ grid-column: span 12;}
+.row-6{grid-row: span 6;}
+.flex{ display: flex;}
+.justify-right{ justify-content: right;}
+.justify-space-bet{ justify-content: space-between;}
+.justify-space-even{ justify-content: space-evenly;}
+.align-center{ align-items: center;}
+.img-resp{ max-width: 100%; height: auto; display: block;}
+.text-center{ text-align: center;}
+
+.btn-red{ background: #f77055; color: #fff; border: none;}
+.btn-black{ color: #000; background: #fff; }
+.bloom{color: #ba6d5d ; }
 
 
 @media screen and (max-width:980px){
@@ -254,12 +286,13 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     .col-t-10{ grid-column: span 10;}
     .col-t-11{ grid-column: span 11;}
     .col-t-12{ grid-column: span 12;}
-    nav ul.flex{display: none;}
+    /* nav ul.flex{display: none;} */
     .menu{display: inline-block;}
     .banner aside li:not(:last-child){margin-bottom: 7px;}
     .banner aside li a{line-height: 20px;}
     .contact a{ margin:1rem 20rem ;} 
     .new-products-sm{margin-top: 2rem;}
+    .cart-about{margin-left: 4rem;}
 }
 
 @media screen and (max-width:787px){
@@ -268,6 +301,7 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     .col-m-6{ grid-column: span 6;}
     .col-m-9{ grid-column: span 9;}
     .col-m-12{grid-column: span 12;}
+    header form{display: none;}
     aside{display: none;}
     .order-m-1{ order: -1;}
     .banner .slide a.shop{left: 20px; bottom: 20px;}
@@ -287,6 +321,7 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     .contact{margin-left:20px;}
     .contact a{ margin:1rem 10rem ;} 
     .contact-info p{margin: 1rem 0;}
+    .cart-about{margin-left: 0;}
 }
 
 
@@ -304,7 +339,6 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     .col-p-11{ grid-column: span 11;}
     .col-p-12{ grid-column: span 12;}
     .order-p-1{order:-1;}
-    header form{display: none;}
     .search{display: inline-block;}
     .hide-p{ display: none;}
     .new-products-sm{margin-top: 1.7rem;}
@@ -312,7 +346,7 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     .contact form input{ width: 100%;}
     .contact a{ margin:1rem 0 ;} 
     .nav-menu{display:none;}
-    #mobileMenu{ display: block; width: 100%; padding: 10px; border-radius: 20px; color:rgb(172, 164, 164); margin-left: 1.5rem;}
+    #mobileMenu{ display: block; width: 100%; padding:  10px 0; border-radius: 20px; color:rgb(172, 164, 164); margin-left: 1.7rem;}
     .shift{margin: 0;}
     .cart-desc .card{padding: 20px 0;}
     .cart-desc+div{gap: 2rem;}
@@ -320,4 +354,7 @@ textarea{background: #f5f5f5;border: none; height: 10rem;}
     .timing li{margin-right: 10px;}
     .full-width-ad li a{height: 56px; width: 59px;}
     .signup{ margin: 4rem 4rem 4rem 0;}
+    .error-desc h1{font-weight: 500; font-size: 70px;}
+    /* .Account form .flex{width: 100%;} */
+    .Account form .input-box.flex{ flex-wrap:  nowrap; width: 100%;}
 }

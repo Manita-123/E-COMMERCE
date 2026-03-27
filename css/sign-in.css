@@ -1,0 +1,19 @@
+
+
+/* signup page */
+.wrap-2{border-top: 1px solid #000;}
+.signup{ margin: 4rem 6.5rem 8.8rem 0;}
+.signup .flex{flex-direction: column; }
+.desc{margin-right: 5.5rem;}
+.sign-para{margin-bottom: 1.5rem;}
+.desc form input{margin: 1.2rem 0; border: none ; border-bottom: 2px solid #000; opacity: 0.6; width: 100%; }
+.signup h3{font:500 36px var(--ff); margin:50px 0 24px; line-height: 30px;}
+.signup-desc .create-acc{ display: block; color: #fff; background:#DB4444 ; padding: 0.7rem 0; border-radius: 5px; margin: 0.4rem 0 0.2rem 0; }
+.signup-desc .sign-w-g{border: solid 1px #000; margin: 0.8rem 0; padding: 0.8rem 0; }
+
+
+
+/* login page */
+.login-desc{display: flex; margin: 1rem 0 2rem 0;}
+.login-acc{display: inline-block; color: #fff; background-color: #DB4444; padding: 0.7rem 0; border-radius: 5px; width: 9rem;}
+.f-pass{color: #DB4444; margin: 0.5rem 0 0 3rem; text-align: center;}

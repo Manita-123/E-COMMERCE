@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -54,8 +54,8 @@
                                 </select>
                             </nav>
                             <div class="flex align-center">
-                                    <form action="/search">
-                                        <input type="text" name="search" placeholder="What are you looking for?"
+                                    <form action="/search" id="searchForm">
+                                        <input type="text" name="search" placeholder="What are you looking for?" id="searchInput"
                                             required>
                                         <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
                                             aria-hidden="true"></span></a>
@@ -665,7 +665,7 @@
                         </section>
                     </div>
                 </div>
-                <a href="" class="view-all-products">View All Products</a>
+                <div class="flex justify-space-even"><a href="" class="view-all-products btn-red ">View All Products</a></div>
             </section>
             <section class="new-arrival">
                 <div class="subheading">
@@ -805,6 +805,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>

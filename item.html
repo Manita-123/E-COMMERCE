@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>E-Commerce Website</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css" />
 </head>
 
 <body>
@@ -41,26 +44,26 @@
                         <div class="flex justify-space-bet align-center">
                             <nav>
                                 <ul class="flex nav-menu">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a class="active" href="index.html">Home</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="Signin.html">Sign Up</a></li>
                                 </ul>
                                 <select id="mobileMenu" title="mobileMenu">
-                                    <option selected disabled>Home</option>
+                                    <option selected disabled>Menu</option>
                                 </select>
                             </nav>
                             <div class="flex align-center">
-                                <form  action="/search" id="searchForm">
-                                    <input type="text" name="search" placeholder="What are you looking for?" id="searchInput" required>
-                                    <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
+                                    <form action="/search" id="searchForm">
+                                        <input type="text" name="search" placeholder="What are you looking for?" id="searchInput"
+                                            required>
+                                        <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
                                             aria-hidden="true"></span></a>
-                                </form>
-                                <a href="wishlist.html" class="wishlist" title="wishlist"><span
-                                        class="fa-regular fa-heart" aria-hidden="true"></a>
-                                <a href="cart.html" class="cart" title="cart"><span class="fa-solid fa-cart-shopping"
-                                        aria-hidden="true"></span></a>
-                                <a class="account" title="account"><span class="fa fa-user"></span></a>
+                                    </form>
+                                    <a href="wishlist.html" class="wishlist" title="wishlist"><span class="fa-regular fa-heart"
+                                            aria-hidden="true"></a>
+                                    <a href="cart.html" class="cart" title="cart"><span
+                                            class="fa-solid fa-cart-shopping" aria-hidden="true"></span></a>
                             </div>
                         </div>
                     </div>
@@ -70,72 +73,13 @@
     </div>
 
     <main>
-        <div class="container ">
+        <div class="container">
             <section class="nav-section">
-                <a class="inactive" href="index.html">Home</a> &nbsp;/ &nbsp;
-                <a href="">Cart</a>
+                <a class="inactive" href="index.html">Account</a> &nbsp; / &nbsp;
+                <a class="inactive" href="index.html">Gaming</a> &nbsp; / &nbsp;
+                <a href="">Havic HV G-92 Gamepad</a>
             </section>
-            <div class="cart-desc ">
-                <div class="card flex justify-space-bet align-center">
-                    <p>Product</p>
-                    <p class=" shift shift-1">Price</p>
-                    <p class=" shift shift-2">Quantity</p>
-                    <p>Subtotal</p>
-                </div>
-                <div class="card flex justify-space-bet align-center">
-                    <figure class="flex">
-                        <img src="img/miniTV.png" alt="miniTV" width="50" height="39"> &nbsp; &nbsp;
-                        <p>LCD Monitor</p>
-                    </figure>
-                    <p>&dollar;650</p>
-                    <input type="number" value="05" placeholder="0">
-                    <p>&dollar;650</p>
-                </div>
-                <div class="card flex justify-space-bet align-center">
-                    <figure class="flex">
-                        <img src="img/miniGamepad.png" alt="miniGamepad" width="49" height="43"> &nbsp; &nbsp;
-                        <p>Hi Gamepad</p>
-                    </figure>
-                    <p>&dollar;550</p>
-                    <input type="number" value="05" placeholder="0">
-                    <p>&dollar;1100</p>
-                </div>
-            </div>
-            <div class="flex  justify-space-bet">
-                <button type="button" title="Shop" class="view-all-products btn-black">Return To Shop</button>
-                <button type="button" title="Cart" class="view-all-products btn-black">Update Cart</button>
-            </div>
-            <div class="row ">
-                <div class="col-6 col-m-12">
-                    <div class="flex cart-detail ">
-                        <input type="text" placeholder="Coupon Code">
-                        <button type="button" title="Coupon" class="view-all btn-red">Apply Coupon</button>
-                    </div>
-                </div>
-                <div class="col-6 col-m-12 cart-about">
-                        <h4>Card Total</h4>
-                        <div class="flex justify-space-bet">
-                            <p>SubTotal:</p>
-                            <p>&dollar; 1750</p>
-                        </div>
-                        <hr>
-                        <div class="flex justify-space-bet">
-                            <p>shipping:</p>
-                            <p>Free</p>
-                        </div>
-                        <hr>
-                        <div class="flex justify-space-bet">
-                            <p>Total:</p>
-                            <p>&dollar;1750</p>
-                        </div>
-                        <button type="button" title="Cart" class="view-all-products btn-red">Process To
-                            Checkout</button>
-                    
-                </div>
-
-            </div>
         </div>
-
     </main>
 
     <footer>
@@ -198,31 +142,39 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-
+    script src="script.js"></script>
+        
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        
     <script>
         $(function () {
+
+            $(".slider").bxSlider({
+                controls: false,
+                auto: true,
+                pause: 5000,
+                autoHover: true,
+            });
 
             var $menu = $("#mobileMenu");
             
             $menu.empty();
 
-
             $("nav a").each(function(){
 
-                var text = $(this).text();
+                var text = $(this).text(); 
                 var link = $(this).attr("href");
 
-                $menu.append(
+                $("#mobileMenu").append(
                     $("<option></option>").val(link).html(text)
                 );
             });
 
-            $("#mobileMenu").change(function(){
+            $menu.change(function(){
                 window.location = $(this).val();
             });
-        })
+
+        });
     </script>
 </body>
 
