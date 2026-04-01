@@ -55,7 +55,6 @@ body{ font: 16px var(--ff); overflow-x: hidden;}
 
 nav li:hover a  {text-decoration: underline #f0b7bc;}
 nav li:active a{background:#9c9997;}
-#mobileMenu{display: none;}
 
 header{ border-bottom: solid 0.5px #0000004d; padding: 40px 0 16px;}
 header h1{ font-size: 24px; line-height: 1;}
@@ -70,7 +69,9 @@ header form input:focus{outline: none;}
 header form a , header form button{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%);border: none; color: #000; }
 header :is(.wishlist,.cart,.menu,.search, .account){background: none; border: none; width: 32px; height: 32px; margin-left: 12px; color: #000; padding-top: 10px;}
 
-
+#mobileMenu{ display: none; width: 100%; padding:  10px 0; border-radius: 20px; color:rgb(172, 164, 164); margin-left: 1.7rem;}
+#mobileMenu option{border-radius: 10px; background-color: #000; color: #fff; }
+#mobileMenu option:hover{color: #000; background-color: #f8eeee;}
 
 .banner aside{padding:40px 27px 0 0; border-right: .5px solid #0000004d;}
 .banner aside li:not(:last-child){ margin-bottom: 13px;}
@@ -277,9 +278,12 @@ footer form input:focus{outline: none;}
 .checkout h2{margin-bottom: 40px;}
 .checkout form .input-box.flex{width: 100%;}
 .checkout .check-info .flex{margin-top: 20px;}
-.checkout .Account .flex input[type="checkbox"]{margin: 0; cursor: pointer;}
+.checkout .Account .flex input[type="checkbox"]{margin: 0; cursor: pointer; margin-right: 10px;}
+.checkout .check-info .flex input[type="radio"] , .checkout .check-info .flex {gap: 1rem;}
 .check-info p{margin: 10px 0;}
 .line{border-bottom: solid 1px #000;}
+.checkout .cart-desc+div{margin-bottom: 0;}
+.checkout .check-info .flex.cart-detail{margin: 30px 0 40px 0;}
 
 
 @media screen and (max-width:980px){
@@ -331,8 +335,10 @@ footer form input:focus{outline: none;}
     .contact a{ margin:1rem 10rem ;} 
     .contact-info p{margin: 1rem 0;}
     .cart-about{margin-left: 0;}
-    .Account{margin: 0 0 4rem 0;}
+    .Account{margin: 0;}
     .Account form {margin-top: 0;}
+    .checkout .cart-desc{margin-top: 0;}
+
 }
 
 
@@ -357,7 +363,7 @@ footer form input:focus{outline: none;}
     .contact form input{ width: 100%;}
     .contact a{ margin:1rem 0 ;} 
     .nav-menu{display:none;}
-    #mobileMenu{ display: block; width: 100%; padding:  10px 0; border-radius: 20px; color:rgb(172, 164, 164); margin-left: 1.7rem;}
+    #mobileMenu{display: block;}
     .shift{margin: 0;}
     .cart-desc .card{padding: 20px 0;}
     .cart-desc+div{gap: 2rem;}
@@ -366,6 +372,5 @@ footer form input:focus{outline: none;}
     .full-width-ad li a{height: 56px; width: 59px;}
     .signup{ margin: 4rem 4rem 4rem 0;}
     .error-desc h1{font-weight: 500; font-size: 70px;}
-    /* .Account form .flex{width: 100%;} */
     .Account form .input-box.flex{ flex-wrap:  nowrap; width: 100%;}
 }

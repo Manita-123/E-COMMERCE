@@ -166,31 +166,7 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
-
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-    <script>
-        $(function(){
-
-            var $menu = $("#mobileMenu");
-            
-            $menu.empty();
-
-            $("nav a").each(function(){
-
-                var text = $(this).text();
-                var link = $(this).attr("href");
-
-                $("#mobileMenu").append(
-                    $("<option></option>").val(link).html(text)
-                );
-            });
-
-            $("#mobileMenu").change(function(){
-                window.location = $(this).val();
-            });
-        })
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

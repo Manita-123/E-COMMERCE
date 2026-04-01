@@ -13,64 +13,6 @@
 
 <body>
     <div class="wrap-1">
-        <div class="topnav">
-            <div class="container ">
-                <div class="flex justify-space-bet align-center">
-                    <div></div>
-                    <div class="sale">
-                        <p>Suummer Sale For All Swim Suits And Free Express Delivery - OFF 50% <a href="#">Shop Now</a>
-                        </p>
-                    </div>
-                    <div>
-                        <select title="dropdown">
-                            <option>English</option>
-                            <option>Spanish</option>
-                            <option> Germany</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <header>
-            <div class="container">
-                <div class="row jusify-right">
-                    <div class="col-3">
-                        <h1><a href="">Exclusive</a></h1>
-                    </div>
-                    <div class="col-9">
-                        <div class="flex justify-space-bet align-center">
-                            <nav>
-                                <ul class="flex nav-menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="Signin.html">Sign Up</a></li>
-                                </ul>
-                                <select id="mobileMenu" title="mobileMenu">
-                                    <option selected disabled>Menu</option>
-                                </select>
-                            </nav>
-                            <div class="flex align-center">
-                                <form action="/search" id="searchForm">
-                                    <input type="text" name="search" id="searchInput"
-                                        placeholder="What are you looking for?" required>
-                                    <button type="submit" title="search" class=".search">
-                                        <span class="fa fa-magnifying-glass"></span>
-                                    </button>
-                                    <!-- <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
-                                                aria-hidden="true"></span></a> -->
-                                </form>
-                                <a href="wishlist.html" class="wishlist" title="wishlist"><span
-                                        class="fa-regular fa-heart" aria-hidden="true"></a>
-                                <a href="cart.html" class="cart" title="cart"><span class="fa-solid fa-cart-shopping"
-                                        aria-hidden="true"></span></a>
-                                <a class="account" title="account"><span class="fa fa-user"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
     </div>
 
     <div class="wrap-2">
@@ -84,7 +26,7 @@
             </section>
 
             <section class="checkout row">
-                <div class=" col-6 col-m-12 Account">
+                <div class=" col-6 col-p-12 Account">
                     <h2>Billing Details</h2>
                     <form>
                         <div class=" input-box flex">
@@ -117,15 +59,15 @@
                         </div>
 
                         <div class="flex justify-center">
-                            <input type="checkbox" id="scrb" name="scrb" value="news"> &nbsp; &nbsp;
+                            <input type="checkbox" id="scrb" name="scrb" value="news">
                             <label for="scrb"> Save this information for faster check-out next time</label>
                         </div>
                     </form>
                 </div>
 
-                <div class="col-1"></div>
+                <div class="col-1 hide-m"></div>
 
-                <div class="col-5 col-m-12 check-info">
+                <div class="col-5 col-p-12 check-info">
                     <div class="cart-desc ">
                         <div class=" flex justify-space-bet align-center">
                             <figure class="flex">
@@ -156,11 +98,30 @@
 
                     </div>
 
+                    <div class="flex justify-space-bet">
+                        <div class="flex">
+                            <input type="radio" id="bank" name="pay" value="bank">
+                            <label for="bank">Bank</label>
+                        </div>
+                        <div class="flex">
+                            <i class="fa-brands fa-amazon-pay"></i>
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            <i class="fa-brands fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <input type="radio" id="cash" name="pay" value="cash">
+                        <label for="cash">Cash on delivery</label>
+                    </div>
+
                     <div class="flex cart-detail ">
                         <input type="text" placeholder="Coupon Code">
                         <button type="button" title="Coupon" class="view-all btn-red">Apply Coupon</button>
                     </div>
-                    <button type="button" title="Coupon" class="view-all btn-red">Apply Coupon</button>
+                    <button type="button" title="Coupon" class="view-all btn-red">Place Order</button>
+
+
                 </div>
 
             </section>
@@ -227,30 +188,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-    <script>
-        $(function () {
-
-            var $menu = $("#mobileMenu");
-
-            $menu.empty();
-
-            $("nav a").each(function () {
-
-                var text = $(this).text();
-                var link = $(this).attr("href");
-
-                $("#mobileMenu").append(
-                    $("<option></option>").val(link).html(text)
-                );
-            });
-
-            $("#mobileMenu").change(function () {
-                window.location = $(this).val();
-            });
-        })
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
