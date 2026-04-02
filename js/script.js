@@ -3,8 +3,8 @@ fetch("./raw_data/footer.html").then(i => i.text()).then(i => {
     document.querySelector("footer").innerHTML = i;
 });
 
-fetch("./raw_data/header.html").then(i => i.text()).then(i => {
-    document.querySelector(".wrap-1").innerHTML = i;
+fetch("./raw_data/topnav.html").then(i => i.text()).then(i => {
+    document.querySelector(".topnav").innerHTML = i;
 });
 
 
