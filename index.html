@@ -26,7 +26,7 @@
                         <div class="flex justify-space-bet align-center">
                             <nav>
                                 <ul class="flex nav-menu">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li class="active"><a class="active" href="index.html">Home</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="Signin.html">Sign Up</a></li>
@@ -46,6 +46,39 @@
                                         class="fa-regular fa-heart" aria-hidden="true"></a>
                                 <a href="cart.html" class="cart" title="cart"><span class="fa-solid fa-cart-shopping"
                                         aria-hidden="true"></span></a>
+                                <div class="accont-wrapper">
+                                    <button type="button" class="account " title="account" ><span
+                                        class="fa-regular fa-user"></span></button>
+                                <div id="accountMenu" title="accountMenu">
+                                    <ul class="flex fdir-col ">
+                                        <li>
+                                            <a href="account.html" data-value="account" >
+                                                <i class="fa-regular fa-user"></i> Manage My Account
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="cart.html" data-value="order ">
+                                                <i class="fa-solid fa-bag-shopping"></i> My Order
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-value="cancel">
+                                                <i class="fa-regular fa-circle-xmark"></i> My Cancellation
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-value="reviews">
+                                                <i class="fa-regular fa-star"></i> My Reviews
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-value="logout">
+                                                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                                            </a>
+                                        </li>   
+                                    </ul>
+                                </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -225,7 +258,8 @@
                         </section>
                     </div>
                 </div>
-                <div class="flex justify-space-even"><a href="" class="view-all-products btn-red ">View All Products</a></div>
+                <div class="flex justify-space-even"><a href="" class="view-all-products btn-red ">View All Products</a>
+                </div>
                 <div class="sep" role="separator"></div>
             </section>
             <section class="category">
@@ -423,7 +457,7 @@
                         <a href="" class="buy-now text-center">Buy Now!</a>
                     </div>
                     <div class="col-6 col-m-12 order-m-1">
-                        <img src="img/Ads.png" alt="Ads"  loading="lazy" class="img-resp">
+                        <img src="img/Ads.png" alt="Ads" loading="lazy" class="img-resp">
                     </div>
                 </div>
             </section>
@@ -648,8 +682,21 @@
                         </section>
                     </div>
                 </div>
-                <div class="flex justify-space-even"><a href="" class="view-all-products btn-red ">View All Products</a></div>
+                <div class="flex justify-space-even"><a href="" class="view-all-products btn-red ">View All Products</a>
+                </div>
             </section>
+            <div class="grid">
+                <div class="col-6">
+                    <img src="" alt="">
+                </div>
+                <div class="col-6">
+                    <img src="" alt="">
+                    <div class="flex">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
             <section class="new-arrival">
                 <div class="subheading">
                     <p>Featured</p>
@@ -671,8 +718,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6  ">
-                        <div class="new-products-md  col-12">
+                    <div class="col-6 flex fdir-col">
+                        <div class="new-products-md flex ">
                             <img src="img/woman.jpg" alt="women" width="432" height="284" loading="lazy"
                                 class="img-resp">
                             <div class="product-desc-over">
@@ -681,27 +728,25 @@
                                 <a href="">Shop Now</a>
                             </div>
                         </div>
-                        <div class="flex  ">
-                            
-                                <div class="new-products-sm ">
-                                    <img src="img/speaker.svg" alt="speaker" width="210" height="222" loading="lazy"
-                                        class="img-resp">
-                                    <div class="product-desc-over">
-                                        <h3>Speakers</h3>
-                                        <p>Amazon wireless speakers</p>
-                                        <a href="">Shop Now</a>
-                                    </div>
+                        <div class="flex">
+                            <div class="new-products-sm   ">
+                                <img src="img/speaker.svg" alt="speaker" width="210" height="222" loading="lazy"
+                                    class="img-resp">
+                                <div class="product-desc-over">
+                                    <h3>Speakers</h3>
+                                    <p>Amazon wireless speakers</p>
+                                    <a href="">Shop Now</a>
+                                </div>
                             </div>
-                            
-                                <div class="new-products-sm  ">
-                                    <img src="img/perfume.svg" alt="perfume" width="201" height="222" loading="lazy"
-                                        class="img-resp">
-                                    <div class="product-desc-over">
-                                        <h3>Perfume</h3>
-                                        <p>GUCCI INTENSE OUD EDP</p>
-                                        <a href="">Shop Now</a>
-                                    </div>
-                                
+                            <div class="new-products-sm ">
+                                <img src="img/perfume.svg" alt="perfume" width="201" height="222" loading="lazy"
+                                    class="img-resp">
+                                <div class="product-desc-over">
+                                    <h3>Perfume</h3>
+                                    <p>GUCCI INTENSE OUD EDP</p>
+                                    <a href="">Shop Now</a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -726,9 +771,9 @@
                     </div>
                 </div>
             </section>
-            </div>
+        </div>
     </main>
-    
+
     <footer></footer>
 
     <script src="js/script.js"></script>
@@ -750,6 +795,3 @@
 </body>
 
 </html>
-
-
-

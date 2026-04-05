@@ -7,37 +7,21 @@ fetch("./raw_data/topnav.html").then(i => i.text()).then(i => {
     document.querySelector(".topnav").innerHTML = i;
 });
 
-
+//nav-menu
 window.addEventListener("load", function () {
-    
     var menu = document.querySelector("#mobileMenu");
-    
-    console.log(menu);
-    
-
-        if (!menu) {
-        console.log("mobileMenu not found");
-        return;
-    }
-
 
     var links = document.querySelectorAll("nav a");
-     console.log("Links found:", links.length);
 
     // Clear existing options
     menu.innerHTML = "";
 
-    // Get all nav links
-    
-
     links.forEach(function(link) {
         var text = link.textContent;
         var url = link.getAttribute("href");
-
         var option = document.createElement("option");
         option.value = url;
         option.textContent = text;
-
         menu.appendChild(option);
     });
 
@@ -48,27 +32,53 @@ window.addEventListener("load", function () {
 
 });
 
+const cartItem = document.querySelector(".cart");
+
+cartItem.addEventListener("click", (e) => {
+    e.stopPropagation();
+    cartItem.classList.add("active");
+});
+
+document.activeElement("click", () => {
+    cartItem.classList.remove("active");
+})
+
+const user = document.querySelector(".account");
+const accMenu = document.querySelector("#accountMenu");
+
+user.addEventListener("click",(e) => {
+    e.stopPropagation();
+    user.classList.add("active");
+    accMenu.classList.toggle("active");
+});
+
+accMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+    accMenu.classList.remove("active");
+    user.classList.remove("active");
+});
+
+
+//serch form
 const  sForm = document.querySelector("#searchForm");
 
+sForm.addEventListener("submit", function(e){
 
+    e.preventDefault();
 
-// sForm.addEventListener("submit", function(e){
+    let value = document.getElementById("searchInput").value.toLowerCase();
 
-//     e.preventDefault();
+    if(value === "mobile"){
+        window.location.href = "#mobile";
+    }
+    else if(value === "laptop"){
+        window.location.href = "#laptop";
+    }
+    else{
+        window.location.href = "error.html";
+    }
 
-//     let value = document.getElementById("searchInput").value.toLowerCase();
-
-//     if(value === "mobile"){
-//         window.location.href = "#mobile";
-//     }
-//     else if(value === "laptop"){
-//         window.location.href = "#laptop";
-//     }
-//     else if(value === "shoes"){
-//         window.location.href = "#shoes";
-//     }
-//     else{
-//         window.location.href = "error.html";
-//     }
-
-// });
+});

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    
+
 </head>
 
 <body>
@@ -42,11 +42,43 @@
                                     <a href="index.html" title="search"><span class="fa fa-magnifying-glass"
                                             aria-hidden="true"></span></a>
                                 </form>
-                                <a href="wishlist.html" class="wishlist" title="wishlist"><span
-                                        class="fa-regular fa-heart" aria-hidden="true"></a>
+                                <a href="wishlist.html" class="wishlist bloom" title="wishlist"><span
+                                        class="fa-solid fa-heart" aria-hidden="true"></a>
                                 <a href="cart.html" class="cart" title="cart"><span class="fa-solid fa-cart-shopping"
                                         aria-hidden="true"></span></a>
-                                <a href="account.html" class="account" title="account"><span class="fa-regular fa-user"></span></a>
+                                <div class="accont-wrapper">
+                                    <button type="button" class="account " title="account"><span
+                                            class="fa-regular fa-user"></span></button>
+                                    <div id="accountMenu" title="accountMenu">
+                                        <ul class="flex fdir-col ">
+                                            <li>
+                                                <a href="account.html" data-value="account">
+                                                    <i class="fa-regular fa-user"></i> Manage My Account
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="cart.html" data-value="order ">
+                                                    <i class="fa-solid fa-bag-shopping"></i> My Order
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-value="cancel">
+                                                    <i class="fa-regular fa-circle-xmark"></i> My Cancellation
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-value="reviews">
+                                                    <i class="fa-regular fa-star"></i> My Reviews
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-value="logout">
+                                                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -58,7 +90,7 @@
     <div class="wrap-2">
         <main class="container">
             <div class=" wishlist-desc">
-                <section >
+                <section>
                     <div class="flex justify-space-bet">
                         <p>Wishlist &nbsp; (4)</p>
                         <button type="button" title="Move" class="view-all-products btn-black">Move All To Bag</button>
@@ -129,101 +161,105 @@
                 </section>
                 <section class="category">
                     <div class="subheading flex justify-space-bet">
-                        <p><span>Just For You</span></p> 
+                        <p><span>Just For You</span></p>
                         <button type="button" title="Move" class="view-all btn-black">Move All To Bag</button>
                     </div>
-                <div class="row">
-                    <div class="col-3 col-m-6 col-p-12">
-                        <section class="product-sm">
-                            <div class="product-img">
-                                <div class="discount">-40%</div>
-                                <div class="wishlist"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/ipad.png" alt="ipad"
-                                    width="172" height="180" loading="lazy" class="img-resp">
-                                <a class="addtocart" href="">Add To Cart</a>
-                            </div>
-                            <div class="product-desc">
-                                <h3>ASUS FHD Gaming Laptop</h3>
-                                <p class="price">&dollar;960 <del>&dollar;1160</del></p>
-                                <div class="rating">
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span>(65)</span>
+                    <div class="row">
+                        <div class="col-3 col-m-6 col-p-12">
+                            <section class="product-sm">
+                                <div class="product-img">
+                                    <div class="discount">-40%</div>
+                                    <div class="wishlist"><a href="" title="preview" class="fa-regular fa-eye"></a>
+                                    </div>
+                                    <img src="img/ipad.png" alt="ipad" width="172" height="180" loading="lazy"
+                                        class="img-resp">
+                                    <a class="addtocart" href="">Add To Cart</a>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-3 col-m-6 col-p-12">
-                        <section class="product-sm">
-                            <div class="product-img">
-                                <div class="wishlist"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/TV.webp" alt="TV" width="170" height="129" loading="lazy"
-                                    class="img-resp">
-                                <a class="addtocart" href="">Add To Cart</a>
-                            </div>
-                            <div class="product-desc">
-                                <h3>IPS LCD Gaming Monitor</h3>
-                                <p class="price">&dollar;1160 </p>
-                                <div class="rating">
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star">&starf;</span>
-                                    <span>(65)</span>
+                                <div class="product-desc">
+                                    <h3>ASUS FHD Gaming Laptop</h3>
+                                    <p class="price">&dollar;960 <del>&dollar;1160</del></p>
+                                    <div class="rating">
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span>(65)</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-3 col-m-6 col-p-12 best">
-                        <section class="product-sm">
-                            <div class="product-img">
-                                <div class="new"><a href="">New</a></div>
-                                <div class="wishlist"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/havic-gamepad.webp" srcset="img/havic-gamepad-2x.webp" alt="Gamepad" width="172" height="152" loading="lazy"
-                                    class="img-resp">
-                                <a class="addtocart" href="">Add To Cart</a>
-                            </div>
-                            <div class="product-desc">
-                                <h3>HAVIT HV-G92 Gamepad</h3>
-                                <p class="price">&dollar;560 </p>
-                                <div class="rating">
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span>(99)</span>
+                            </section>
+                        </div>
+                        <div class="col-3 col-m-6 col-p-12">
+                            <section class="product-sm">
+                                <div class="product-img">
+                                    <div class="wishlist"><a href="" title="preview" class="fa-regular fa-eye"></a>
+                                    </div>
+                                    <img src="img/TV.webp" alt="TV" width="170" height="129" loading="lazy"
+                                        class="img-resp">
+                                    <a class="addtocart" href="">Add To Cart</a>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-3 col-m-6 col-p-12">
-                        <section class="product-sm">
-                            <div class="product-img">
-                                <div class="wishlist"><a href="" title="preview" class="fa-regular fa-eye"></a></div>
-                                <img src="img/keyboard.png" alt="Keyboard" width="190" height="101" loading="lazy"
-                                    class="img-resp">
-                                <a class="addtocart" href="">Add To Cart</a>
-                            </div>
-                            <div class="product-desc">
-                                <h3>AK-900 Wired Keyboard</h3>
-                                <p class="price">&dollar;200 </p>
-                                <div class="rating">
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span class="star-full">&starf;</span>
-                                    <span>(65)</span>
+                                <div class="product-desc">
+                                    <h3>IPS LCD Gaming Monitor</h3>
+                                    <p class="price">&dollar;1160 </p>
+                                    <div class="rating">
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star">&starf;</span>
+                                        <span>(65)</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
+                        <div class="col-3 col-m-6 col-p-12 best">
+                            <section class="product-sm">
+                                <div class="product-img">
+                                    <div class="new"><a href="">New</a></div>
+                                    <div class="wishlist"><a href="" title="preview" class="fa-regular fa-eye"></a>
+                                    </div>
+                                    <img src="img/havic-gamepad.webp" srcset="img/havic-gamepad-2x.webp" alt="Gamepad"
+                                        width="172" height="152" loading="lazy" class="img-resp">
+                                    <a class="addtocart" href="">Add To Cart</a>
+                                </div>
+                                <div class="product-desc">
+                                    <h3>HAVIT HV-G92 Gamepad</h3>
+                                    <p class="price">&dollar;560 </p>
+                                    <div class="rating">
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span>(99)</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-3 col-m-6 col-p-12">
+                            <section class="product-sm">
+                                <div class="product-img">
+                                    <div class="wishlist"><a href="" title="preview" class="fa-regular fa-eye"></a>
+                                    </div>
+                                    <img src="img/keyboard.png" alt="Keyboard" width="190" height="101" loading="lazy"
+                                        class="img-resp">
+                                    <a class="addtocart" href="">Add To Cart</a>
+                                </div>
+                                <div class="product-desc">
+                                    <h3>AK-900 Wired Keyboard</h3>
+                                    <p class="price">&dollar;200 </p>
+                                    <div class="rating">
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span class="star-full">&starf;</span>
+                                        <span>(65)</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
                     </div>
-                </div>
                 </section>
             </div>
         </main>
