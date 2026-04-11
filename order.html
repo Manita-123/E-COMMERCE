@@ -26,7 +26,7 @@
                             <nav>
                                 <ul class="flex nav-menu">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a class="active" href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="Signin.html">Sign Up</a></li>
                                 </ul>
@@ -56,7 +56,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="order.html" data-value="order ">
+                                                <a href="cart.html" data-value="order ">
                                                     <i class="fa-solid fa-bag-shopping"></i> My Order
                                                 </a>
                                             </li>
@@ -82,70 +82,97 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </header>
     </div>
 
     <div class="wrap-2">
-        <div class="container">
-            <section class="nav-section">
-                <a class="inactive" href="index.html">Home</a> &nbsp; / &nbsp;
-                <a href="account.html">My Account</a>
-            </section>
-
-            <div class="row Account">
-                <div class="col-4">
-                    <aside>
-                        <p>Manage My Account</p>
-                        <ul class="flex">
-                            <li><a class="start" href="profile.html">My Profile</a></li>
-                            <li><a href="#">Address Book</a></li>
-                            <li><a href="#">My Payment Options</a></li>
-                        </ul>
-                        <p>My Orders</p>
-                        <ul class="flex">
-                            <li><a href="#">My Returns</a></li>
-                            <li><a href="#">My Cncellations</a></li>
-                        </ul>
-                        <p>My Wishlist</p>
-                    </aside>
+        <div class="container ">
+            <div class="Order flex justify-center align-center fdir-col">
+                <h1>My Orders</h1>
+                <div class="card row">
+                    <div class="col-4 col-m-6 col-p-12 ">
+                        <img src="img/Shooter_Gamepad.png" alt="Shooter_Gamepad" width="178" height="150"
+                            class="img-resp">
+                    </div>
+                    <div class="col-4 col-m-6 col-p-12">
+                        <h2>GP11 Shooter USB Gamepad</h2>
+                        <p>&#8360; 61481 </p>
+                        <div class="flex justify-space-bet">
+                            <button type="button"><i class="fa-solid fa-cart-shopping"></i>Buy Again</button>
+                            <button type="button"><i class="fa-solid fa-cart-flatbed"></i>Track Order</button>
+                        </div>
+                    </div>
+                    <div class="col-4 order-id hide-m col-p-12">
+                        <p>Order ID : #1254 <span>|</span> 04/06/2024</p>
+                    </div>
                 </div>
-                <div class="col-8 col-m-12">
-                    <form>
-                        <h3>Edit your profile</h3>
-                        <div class="flex Account-input">
-                            <div class="  input-box flex">
-                                <label for="fname">First Name</label>
-                                <input type="text" id="fname" placeholder="Md" required>
-                            </div>
-                            <div class="  input-box flex">
-                                <label for="lname">Last Name</label>
-                                <input type="text" id="lname" placeholder="Rimel" required>
-                            </div>
+                <div class="card row">
+                    <div class="col-4 col-m-6 col-p-12">
+                        <img src="img/Shoes.png" alt="Shooes" width="186" height="164"
+                            class="img-resp">
+                    </div>
+                    <div class="col-4 col-m-6 col-p-12">
+                        <h2>Jr. Zoom Soccer Cleats</h2>
+                        <p>&#8360; 1600 </p>
+                        <div class="flex justify-space-bet">
+                            <button type="button"><i class="fa-solid fa-cart-shopping"></i>Buy Again</button>
+                            <button type="button"><i class="fa-solid fa-cart-flatbed"></i>Track Order</button>
                         </div>
-                        <div class="flex Account-input">
-                            <div class="  input-box flex">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="rimel@gmail.com" required>
-                            </div>
-                            <div class="input-box flex">
-                                <label for="add">Address</label>
-                                <input type="text" id="add" placeholder="New Delhi , India" required>
-                            </div>
+                    </div>
+                    <div class="col-4 order-id hide-m col-p-12">
+                        <p>Order ID : #1253 <span>|</span> 21/08/2024</p>
+                    </div>
+                </div>
+                <div class="card row">
+                    <div class="col-4 col-m-6 col-p-12">
+                        <img src="img/ipad.png" alt="ipad" width="172" height="180"
+                            class="img-resp">
+                    </div>
+                    <div class="col-4 col-m-6 col-p-12">
+                        <h2>ASUS FHD Gaming Laptop</h2>
+                        <p>&#8360; 80000 </p>
+                        <div class="flex justify-space-bet">
+                            <button type="button"><i class="fa-solid fa-cart-shopping"></i>Buy Again</button>
+                            <button type="button"><i class="fa-solid fa-cart-flatbed"></i>Track Order</button>
                         </div>
-                        <div class=" pwds">
-                            <label for="pass">Password Changes</label>
-                            <br>
-                            <br>
-                            <input type="password" id="pwd" placeholder="Current Password" required>
-                            <input type="password" id="psw" placeholder="New Password" required>
-                            <input type="password" id="pass" placeholder="Confirm New Password" required>
+                    </div>
+                    <div class="col-4 order-id hide-m col-p-12">
+                        <p>Order ID : #1252 <span>|</span> 08/09/2024</p>
+                    </div>
+                </div>
+                <div class="card row">
+                    <div class="col-4 col-m-6 col-p-12">
+                        <img src="img/DSLR_camera.png" alt="DSLR_camera" width="146" height="163"
+                            class="img-resp">
+                    </div>
+                    <div class="col-4 col-m-6 col-p-12">
+                        <h2>CANON EOS DSLR Camera</h2>
+                        <p>&#8360; 14000 </p>
+                        <div class="flex justify-space-bet">
+                            <button type="button"><i class="fa-solid fa-cart-shopping"></i>Buy Again</button>
+                            <button type="button"><i class="fa-solid fa-cart-flatbed"></i>Track Order</button>
                         </div>
-                    </form>
-                    <div class="flex justify-right align-center">
-                        <div class="flex cancel-btn"><a href="#">Canel</a></div>
-                        <div class="flex justify-space-even"><a href="" class="view-all-products btn-red ">Save
-                                Changes</a>
+                    </div>
+                    <div class="col-4 order-id hide-m col-p-12">
+                        <p>Order ID : #1251 <span>|</span> 16/11/2024</p>
+                    </div>
+                </div>
+                <div class="card row">
+                    <div class="col-4 col-m-6 col-p-12">
+                        <img src="img/jacket.png" alt="jacket" width="182" height="176"
+                            class="img-resp">
+                    </div>
+                    <div class="col-4 col-m-6 col-p-12">
+                        <h2>Quited Satin Jacket</h2>
+                        <p>&#8360; 8900 </p>
+                        <div class="flex justify-space-bet">
+                            <button type="button"><i class="fa-solid fa-cart-shopping"></i>Buy Again</button>
+                            <button type="button"><i class="fa-solid fa-cart-flatbed"></i>Track Order</button>
                         </div>
+                    </div>
+                    <div class="col-4 order-id hide-m col-p-12">
+                        <p>Order ID : #1250 <span>|</span> 23/03/2025</p>
                     </div>
                 </div>
             </div>

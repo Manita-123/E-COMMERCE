@@ -7,6 +7,13 @@ fetch("./raw_data/topnav.html").then(i => i.text()).then(i => {
     document.querySelector(".topnav").innerHTML = i;
 });
 
+function showDate() {
+    const date = new Date();
+    document.querySelector(".timers").innerHTML = date.toLocaleTimeString();
+}
+
+setInterval(showDate, 1000);
+
 //nav-menu
 window.addEventListener("load", function () {
     var menu = document.querySelector("#mobileMenu");
@@ -16,7 +23,7 @@ window.addEventListener("load", function () {
     // Clear existing options
     menu.innerHTML = "";
 
-    links.forEach(function(link) {
+    links.forEach(function (link) {
         var text = link.textContent;
         var url = link.getAttribute("href");
         var option = document.createElement("option");
@@ -26,7 +33,7 @@ window.addEventListener("load", function () {
     });
 
     // On change redirect
-    menu.addEventListener("change", function() {
+    menu.addEventListener("change", function () {
         window.location.href = this.value;
     });
 
@@ -37,16 +44,16 @@ const cartItem = document.querySelector(".cart");
 cartItem.addEventListener("click", (e) => {
     e.stopPropagation();
     cartItem.classList.add("active");
+    document.activeElement("click", () => {
+        cartItem.classList.remove("active");
+    })
 });
 
-document.activeElement("click", () => {
-    cartItem.classList.remove("active");
-})
 
 const user = document.querySelector(".account");
 const accMenu = document.querySelector("#accountMenu");
 
-user.addEventListener("click",(e) => {
+user.addEventListener("click", (e) => {
     e.stopPropagation();
     user.classList.add("active");
     accMenu.classList.toggle("active");
@@ -63,21 +70,21 @@ document.addEventListener("click", () => {
 
 
 //serch form
-const  sForm = document.querySelector("#searchForm");
+const sForm = document.querySelector("#searchForm");
 
-sForm.addEventListener("submit", function(e){
+sForm.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
     let value = document.getElementById("searchInput").value.toLowerCase();
 
-    if(value === "mobile"){
+    if (value === "mobile") {
         window.location.href = "#mobile";
     }
-    else if(value === "laptop"){
+    else if (value === "laptop") {
         window.location.href = "#laptop";
     }
-    else{
+    else {
         window.location.href = "error.html";
     }
 
