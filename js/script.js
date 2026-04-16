@@ -20,22 +20,18 @@ window.addEventListener("DOMContentLoaded", () => {
         const clickedAccount = e.target.closest(".account");
         const clickedAccountMenu = e.target.closest("#accountMenu");
 
-        if (cart) {
-            if (clickedCart) {
-                cart.classList.toggle("active");
-            } else {
-                cart.classList.remove("active");
-            }
+        if (clickedCart) {
+            cart.classList.toggle("active");
+        } else {
+            cart.classList.remove("active");
         }
 
-        if (accountButton && accountMenu) {
-            if (clickedAccount) {
-                accountButton.classList.toggle("active");
-                accountMenu.classList.toggle("active");
-            } else if (!clickedAccountMenu) {
-                accountButton.classList.remove("active");
-                accountMenu.classList.remove("active");
-            }
+        if (clickedAccount) {
+            accountButton.classList.toggle("active");
+            accountMenu.classList.toggle("active");
+        } else if (!clickedAccountMenu) {
+            accountButton.classList.remove("active");
+            accountMenu.classList.remove("active");
         }
     });
 
@@ -51,7 +47,7 @@ function setupMobileMenu(menu) {
     if (!menu) return;
 
     const links = document.querySelectorAll("nav a");
-    menu.innerHTML = "";
+    // menu.innerHTML = "";
 
     links.forEach((link) => {
         const option = document.createElement("option");
@@ -71,12 +67,14 @@ function setupMobileMenu(menu) {
 const searchForm = document.querySelector("#searchForm");
 const searchInput = document.querySelector("#searchInput");
 
-if (searchForm && searchInput) {
-    searchForm.addEventListener("submit", (e) => {
-        e.preventDefault();
 
-        const value = searchInput.value.trim().toLowerCase();
+searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-        window.location.href = value === "mobile" ? "#mobile" : "error.html";
-    });
-}
+    const value = searchInput.value.trim().toLowerCase();
+
+    if (value == "mobile")
+        window.location.href = "#mobile";
+    else
+        window.location.href = "error.html";
+});
