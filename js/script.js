@@ -7,85 +7,76 @@ fetch("./raw_data/topnav.html").then(i => i.text()).then(i => {
     document.querySelector(".topnav").innerHTML = i;
 });
 
-function showDate() {
-    const date = new Date();
-    document.querySelector(".timers").innerHTML = date.toLocaleTimeString();
-}
+window.addEventListener("DOMContentLoaded", () => {
+    const mobileMenu = document.querySelector("#mobileMenu");
+    const accountButton = document.querySelector(".account");
+    const accountMenu = document.querySelector("#accountMenu");
+    const cart = document.querySelector(".cart");
 
-setInterval(showDate, 1000);
+    setupMobileMenu(mobileMenu);
 
-//nav-menu
-window.addEventListener("load", function () {
-    var menu = document.querySelector("#mobileMenu");
+    document.addEventListener("click", (e) => {
+        const clickedCart = e.target.closest(".cart");
+        const clickedAccount = e.target.closest(".account");
+        const clickedAccountMenu = e.target.closest("#accountMenu");
 
-    var links = document.querySelectorAll("nav a");
+        if (cart) {
+            if (clickedCart) {
+                cart.classList.toggle("active");
+            } else {
+                cart.classList.remove("active");
+            }
+        }
 
-    // Clear existing options
+        if (accountButton && accountMenu) {
+            if (clickedAccount) {
+                accountButton.classList.toggle("active");
+                accountMenu.classList.toggle("active");
+            } else if (!clickedAccountMenu) {
+                accountButton.classList.remove("active");
+                accountMenu.classList.remove("active");
+            }
+        }
+    });
+
+    document.addEventListener("dblclick", (e) => {
+        const product = e.target.closest(".product-sm");
+        if (product) {
+            window.location.href = "item.html";
+        }
+    });
+});
+
+function setupMobileMenu(menu) {
+    if (!menu) return;
+
+    const links = document.querySelectorAll("nav a");
     menu.innerHTML = "";
 
-    links.forEach(function (link) {
-        var text = link.textContent;
-        var url = link.getAttribute("href");
-        var option = document.createElement("option");
-        option.value = url;
-        option.textContent = text;
+    links.forEach((link) => {
+        const option = document.createElement("option");
+        option.value = link.getAttribute("href") || "";
+        option.textContent = link.textContent.trim();
         menu.appendChild(option);
     });
 
-    // On change redirect
-    menu.addEventListener("change", function () {
-        window.location.href = this.value;
+    menu.addEventListener("change", (e) => {
+        if (e.target.value) {
+            window.location.href = e.target.value;
+        }
     });
-
-});
-
-const cartItem = document.querySelector(".cart");
-
-cartItem.addEventListener("click", (e) => {
-    e.stopPropagation();
-    cartItem.classList.add("active");
-    document.activeElement("click", () => {
-        cartItem.classList.remove("active");
-    })
-});
-
-
-const user = document.querySelector(".account");
-const accMenu = document.querySelector("#accountMenu");
-
-user.addEventListener("click", (e) => {
-    e.stopPropagation();
-    user.classList.add("active");
-    accMenu.classList.toggle("active");
-});
-
-accMenu.addEventListener("click", (e) => {
-    e.stopPropagation();
-});
-
-document.addEventListener("click", () => {
-    accMenu.classList.remove("active");
-    user.classList.remove("active");
-});
-
+}
 
 //serch form
-const sForm = document.querySelector("#searchForm");
+const searchForm = document.querySelector("#searchForm");
+const searchInput = document.querySelector("#searchInput");
 
-sForm.addEventListener("submit", function (e) {
+if (searchForm && searchInput) {
+    searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    e.preventDefault();
+        const value = searchInput.value.trim().toLowerCase();
 
-    let value = document.getElementById("searchInput").value.toLowerCase();
-
-    if (value === "mobile") {
-        window.location.href = "#mobile";
-    }
-    else if (value === "laptop") {
-        window.location.href = "#laptop";
-    }
-    else {
-        window.location.href = "error.html";
-    }
-
-});
+        window.location.href = value === "mobile" ? "#mobile" : "error.html";
+    });
+}
